@@ -4,10 +4,17 @@
 Use the package manager [composer](https://getcomposer.org/) to install.
 
 ## Installation
+
+Clone this repository.
+
+```bash
+$ git clone https://github.com/roufy235/Multive.git
+```
+
 It's recommended that you use [Composer](https://getcomposer.org/) to install Slim.
 
 ```bash
-$ composer require roufy235/multive
+$ composer install
 ```
 
 ## Built On
