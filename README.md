@@ -4,8 +4,10 @@
 Use the package manager [composer](https://getcomposer.org/) to install.
 
 ## Installation
-```
-conposer install
+It's recommended that you use [Composer](https://getcomposer.org/) to install Slim.
+
+```bash
+$ composer require roufy235/multive
 ```
 
 ## Built On
