@@ -1,4 +1,14 @@
 {
+    "name": "Multive",
+    "description": "A simple php framework",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Abdulrouf Olatunbosun Bello",
+            "email": "roufy235@gmail.com"
+        }
+    ],
     "require": {
         "slim/slim": "4.*",
         "slim/psr7": "^1.2",
