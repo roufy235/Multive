@@ -11,7 +11,7 @@ Clone this repository.
 $ git clone https://github.com/roufy235/Multive.git
 ```
 
-It's recommended that you use [Composer](https://getcomposer.org/) to install Slim.
+It's recommended that you use [Composer](https://getcomposer.org/) to install Packages.
 
 ```bash
 $ composer install
