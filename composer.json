@@ -9,6 +9,7 @@
             "email": "roufy235@gmail.com"
         }
     ],
+    "minimum-stability": "stable",
     "require": {
         "slim/slim": "4.*",
         "slim/psr7": "^1.2",
