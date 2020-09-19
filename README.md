@@ -1,4 +1,4 @@
-# Covirtue PHP Framework
+# Multive - PHP Web Framework
 
 ## Requirement
 Use the package manager [composer](https://getcomposer.org/) to install.
@@ -8,7 +8,7 @@ Use the package manager [composer](https://getcomposer.org/) to install.
 conposer install
 ```
 
-## Built With
+## Built On
 * [Slim Framework](http://www.slimframework.com/) - Slim is a PHP micro framework that helps you quickly write simple yet powerful web applications and APIs.
 
 
