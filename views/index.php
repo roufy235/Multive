@@ -12,12 +12,12 @@ index
 
 </div>
 <script>
-    const baseUrl = '<?php echo getBasePath(); ?>'
+    const baseUrl = '<?php echo getBasePath(true); ?>'
     const app = new Vue({
         el: '#indexApp',
         created() {
             const data = new FormData();
-            axios.post(baseUrl + '/api/registration', data)
+            axios.post(baseUrl + '/registration', data)
             .then(({data, status}) => {
                 alert(data)
             })

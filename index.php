@@ -15,7 +15,7 @@ function getBasePath(bool $isApi = false) : string { // project base path
     $uri = (string) parse_url('http://a' . $_SERVER['REQUEST_URI'] ?? '', PHP_URL_PATH);
     if ($scriptDir !== '/' && stripos($uri, $scriptDir) === 0) {
         if ($isApi) { //calling for api base path
-            return $scriptDir.'/api/';
+            return $scriptDir.'/api';
         }
         return $scriptDir;
     }
