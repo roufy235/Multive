@@ -15,7 +15,8 @@
         "slim/psr7": "^1.2",
         "slim/php-view": "^3.0",
       "ext-json": "*",
-      "ext-pdo": "*"
+      "ext-pdo": "*",
+        "phpmailer/phpmailer": "^6.1"
     }
     ,
     "require-dev": {

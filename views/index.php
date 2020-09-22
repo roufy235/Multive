@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <script src="<?php echo BASE_PATH; ?>/assets/js/vue@2.6.12.js" type="text/javascript"></script>
-    <script src="<?php echo BASE_PATH; ?>/assets/js/axios.min.js" type="text/javascript"></script>
+    <script src="<?php echo getBasePath(); ?>/assets/js/vue@2.6.12.js" type="text/javascript"></script>
+    <script src="<?php echo getBasePath(); ?>/assets/js/axios.min.js" type="text/javascript"></script>
 </head>
 <body>
 index
@@ -12,7 +12,7 @@ index
 
 </div>
 <script>
-    const baseUrl = '<?php echo BASE_PATH; ?>'
+    const baseUrl = '<?php echo getBasePath(); ?>'
     const app = new Vue({
         el: '#indexApp',
         created() {

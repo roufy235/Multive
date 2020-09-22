@@ -1,4 +1,8 @@
 <?php
+use PHPMailer\PHPMailer\PHPMailer;
+require_once 'access_file.php';
+require_once 'SQL.php';
+require_once 'EMAIL_TEMPLATE_HOLDER.php';
 class DB {
     public array $response = array();
     public PDO $conn;

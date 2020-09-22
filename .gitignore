@@ -2,3 +2,4 @@
 
 vendor
 controllers/access/Online.php
+node_modules

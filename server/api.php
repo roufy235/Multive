@@ -52,7 +52,7 @@ return function (App $app) {
     };
 
     $app->post('/api/registration', function (Request $request, Response $response) {
-        require_once __DIR__ .'/../controllers/REGISTRATION.php';
+        require_once __DIR__ . '/../controllers/REGISTRATION.php';
         $response->getBody()->write("Hello World!");
         return $response;
     });
