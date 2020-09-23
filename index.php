@@ -22,7 +22,7 @@ function getBasePath(bool $isApi = false) : string { // project base path
     return '';
 }
 
-const REMOTE_ADDR = array('192.168.43.8', 'localhost', '127.0.0.1', '192.168.43.166', '192.168.43.237');
+const REMOTE_ADDR = ['192.168.43.8', 'localhost', '127.0.0.1', '192.168.43.166', '192.168.43.237'];
 require __DIR__ . '/vendor/autoload.php';
 require __DIR__ . '/controllers/access_file.php';
 require __DIR__ . '/controllers/DB.php';
