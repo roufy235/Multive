@@ -8,4 +8,10 @@ if (!in_array($_SERVER['REMOTE_ADDR'], REMOTE_ADDR)) {
 $GLOBALS = [
     // connection
     'localhost' => 'localhost', 'dbName' => DB_NAME, 'user' => USER, 'password' => PASSWORD,
+
+    //multiveMailer
+    'phpmailerHost' => 'example.com',
+    'phpmailerPort' => '465',
+    'phpmailerUsername' => '',
+    'phpmailerPassword' => '',
 ];
