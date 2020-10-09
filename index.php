@@ -1,6 +1,8 @@
 <?php
 session_start();
 date_default_timezone_set('Africa/Lagos');
+
+use DI\ContainerBuilder;
 use Psr\Http\Message\ServerRequestInterface;
 use Psr\Http\Server\RequestHandlerInterface;
 use Slim\Exception\HttpNotFoundException;
@@ -37,6 +39,14 @@ require __DIR__ . '/controllers/access_file.php';
 require __DIR__ . '/controllers/DB.php';
 require __DIR__ . '/helpers/myFunctions.php';
 require __DIR__ . '/helpers/cookie.php';
+
+
+$containerBuilder = new ContainerBuilder();
+/** @noinspection PhpUnhandledExceptionInspection */
+$container = $containerBuilder->build();
+$container->set('upload_directory', __DIR__ . '/uploads/product_images'. DIRECTORY_SEPARATOR);
+// e.g $path = $this->get('upload_directory');
+AppFactory::setContainer($container);
 
 // Create App
 $app = AppFactory::create();
