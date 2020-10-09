@@ -1,7 +1,6 @@
 <?php
 session_start();
 date_default_timezone_set('Africa/Lagos');
-
 use DI\ContainerBuilder;
 use Psr\Http\Message\ServerRequestInterface;
 use Psr\Http\Server\RequestHandlerInterface;
@@ -11,6 +10,15 @@ use Slim\Psr7\Response;
 use Slim\Views\PhpRenderer;
 use Psr\Http\Message\ResponseInterface as ResponseThis;
 use Slim\Routing\RouteContext;
+
+const REMOTE_ADDR = ['192.168.43.8', 'localhost', '127.0.0.1', '192.168.43.166', '192.168.43.237'];
+require __DIR__ . '/vendor/autoload.php';
+if (!in_array($_SERVER['REMOTE_ADDR'], REMOTE_ADDR)) {
+    $dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
+} else {
+    $dotenv = Dotenv\Dotenv::createImmutable(__DIR__, '.env.example');
+}
+$dotenv->load();
 
 function getBasePath(bool $isApi = false) : string { // project base path
     $scriptDir = str_replace('\\', '/', dirname($_SERVER['SCRIPT_NAME']));
@@ -27,18 +35,9 @@ function getBasePath(bool $isApi = false) : string { // project base path
     return '';
 }
 
-const ADMIN_JAVASCRIPT_VERSION_CONTROL = '1';
-const ADMIN_ROUTE_BASE = '/console';
 function getAdminUrlBasePath() : string { // project base path
-    return getBasePath().ADMIN_ROUTE_BASE;
+    return getBasePath().$_ENV['ADMIN_ROUTE_BASE'];
 }
-
-const REMOTE_ADDR = ['192.168.43.8', 'localhost', '127.0.0.1', '192.168.43.166', '192.168.43.237'];
-require __DIR__ . '/vendor/autoload.php';
-require __DIR__ . '/controllers/access_file.php';
-require __DIR__ . '/controllers/DB.php';
-require __DIR__ . '/helpers/myFunctions.php';
-require __DIR__ . '/helpers/cookie.php';
 
 
 $containerBuilder = new ContainerBuilder();
@@ -58,7 +57,7 @@ $app->add(function (ServerRequestInterface $request, RequestHandlerInterface $ha
     $requestHeaders = $request->getHeaderLine('Access-Control-Request-Headers');
 
     $response = $handler->handle($request);
-    $response = $response->withHeader('Access-Control-Allow-Origin', ACCESS_CONTROL);
+    $response = $response->withHeader('Access-Control-Allow-Origin', $_ENV['ACCESS_CONTROL']);
     $response = $response->withHeader('Access-Control-Allow-Methods', implode(',', $methods));
     $response = $response->withHeader('Access-Control-Allow-Headers', $requestHeaders);
     // Optional: Allow Ajax CORS requests with Authorization header

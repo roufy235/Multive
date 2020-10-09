@@ -17,6 +17,10 @@ It's recommended that you use [Composer](https://getcomposer.org/) to install Pa
 $ composer install
 ```
 
+```bash
+$ composer run-script post-root-package-install
+```
+
 ## Built On
 * [Slim Framework](http://www.slimframework.com/) - Slim is a PHP micro framework that helps you quickly write simple yet powerful web applications and APIs.
 

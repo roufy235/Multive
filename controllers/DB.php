@@ -1,28 +1,25 @@
 <?php
 use PHPMailer\PHPMailer\PHPMailer;
-require_once 'access_file.php';
 require_once 'SQL.php';
 require_once 'EMAIL_TEMPLATE_HOLDER.php';
 class DB {
     public array $response = array();
     public PDO $conn;
-    protected array $_emptyJson, $access = array();
+    protected array $_emptyJson;
     protected string $_todayDate;
 
     public function __construct () {
-        global $GLOBALS;
-        $this->access = $GLOBALS;
         $this->response['status'] = false;
         $this->response['statusStr'] = '';
         $this->_todayDate = Date('Y-m-d H:i:s');
         /** @noinspection PhpUnhandledExceptionInspection */
         $this->_emptyJson = json_decode('{}', true, 512, JSON_THROW_ON_ERROR);
         try {
-            $this->conn = new PDO('mysql:dbname='.$this->access['dbName'].';host=localhost', $this->access['user'], $this->access['password']);
+            $this->conn = new PDO('mysql:dbname='.$_ENV['DB_NAME'].';host='.$_ENV['DB_HOST'], $_ENV['USER'], $_ENV['PASSWORD']);
             $this->conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
             //echo 'connected';
         } catch (PDOException $error) {
-            //echo $error->getMessage();
+            echo $error->getMessage();
         }
     }
 
@@ -89,11 +86,11 @@ class DB {
         $mail->isSMTP();
         $mail->SMTPAuth = true;
         $mail->SMTPSecure = 'ssl';
-        $mail->Host = $this->access['phpmailerHost'];
-        $mail->Port = $this->access['phpmailerPort'];
+        $mail->Host = $_ENV['PHPMAILER_HOST'];
+        $mail->Port = $_ENV['PHPMAILER_PORT'];
         $mail->isHTML(true);
-        $mail->Username = $this->access['phpmailerUsername'];
-        $mail->Password = $this->access['phpmailerPassword'];
+        $mail->Username = $_ENV['PHPMAILER_USERNAME'];
+        $mail->Password = $_ENV['PHPMAILER_PASSWORD'];
         try {
             $mail->addReplyTo($senderEmail, $name);
             $mail->setFrom($senderEmail, $name);

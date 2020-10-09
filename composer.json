@@ -1,26 +1,38 @@
 {
-    "name": "roufy235/multive",
-    "description": "A simple php framework",
-    "type": "library",
-    "license": "MIT",
-    "authors": [
-        {
-            "name": "Abdulrouf Olatunbosun Bello",
-            "email": "roufy235@gmail.com"
-        }
-    ],
-    "minimum-stability": "stable",
-    "require": {
-        "slim/slim": "4.*",
-        "slim/psr7": "^1.2",
-        "slim/php-view": "^3.0",
-      "ext-json": "*",
-      "ext-pdo": "*",
-        "phpmailer/phpmailer": "^6.1",
-        "php-di/php-di": "^6.2"
+  "name": "roufy235/multive",
+  "description": "A simple php framework",
+  "type": "library",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Abdulrouf Olatunbosun Bello",
+      "email": "roufy235@gmail.com"
     }
-    ,
-    "require-dev": {
-        "roave/security-advisories": "dev-master"
-    }
+  ],
+  "minimum-stability": "stable",
+  "require": {
+    "slim/slim": "4.*",
+    "slim/psr7": "^1.2",
+    "slim/php-view": "^3.0",
+    "ext-json": "*",
+    "ext-pdo": "*",
+    "phpmailer/phpmailer": "^6.1",
+    "php-di/php-di": "^6.2",
+    "vlucas/phpdotenv": "^5.2"
+  },
+  "autoload": {
+    "files": [
+      "./controllers/DB.php",
+      "./helpers/myFunctions.php",
+      "./helpers/cookie.php"
+    ]
+  },
+  "scripts": {
+    "post-root-package-install": [
+      "php -r \"file_exists('.env') || copy('.env.example', '.env');\""
+    ]
+  },
+  "require-dev": {
+    "roave/security-advisories": "dev-master"
+  }
 }
