@@ -8,19 +8,6 @@ use Slim\Routing\RouteContext as GetRoute;
 use Slim\Psr7\Response as Res;
 use Slim\App;
 
-
-function returnMyStatus (array $responseArray, Response $response): Response {
-    try {
-        $response->getBody()->write(json_encode($responseArray, JSON_THROW_ON_ERROR));
-        if ($responseArray['status']) {
-            return $response->withHeader('Content-Type', 'application/json')->withStatus(200);
-        }
-        return $response->withHeader('Content-Type', 'application/json')->withStatus(202);
-    } catch (JsonException $e) {
-        return $response->withHeader('Content-Type', 'application/json')->withStatus(205);
-    }
-}
-
 return function (App $app) {
 
     $verifyAccountMiddleware = function (Request $request, RequestHandler $handler) {

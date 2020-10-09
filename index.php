@@ -19,7 +19,16 @@ function getBasePath(bool $isApi = false) : string { // project base path
         }
         return $scriptDir;
     }
+    if ($isApi) {
+        return '/api';
+    }
     return '';
+}
+
+const ADMIN_JAVASCRIPT_VERSION_CONTROL = '1';
+const ADMIN_ROUTE_BASE = '/console';
+function getAdminUrlBasePath() : string { // project base path
+    return getBasePath().ADMIN_ROUTE_BASE;
 }
 
 const REMOTE_ADDR = ['192.168.43.8', 'localhost', '127.0.0.1', '192.168.43.166', '192.168.43.237'];
@@ -50,8 +59,28 @@ $app->addRoutingMiddleware();
 $app->setBasePath(getBasePath());
 if (in_array($_SERVER['REMOTE_ADDR'], REMOTE_ADDR)) {
     $app->addErrorMiddleware(true, true, true);
+    error_reporting(E_ALL); // Error/Exception engine, always use E_ALL
+
+    ini_set('ignore_repeated_errors', TRUE); // always use TRUE
+
+    ini_set('display_errors', FALSE); // Error/Exception display, use FALSE only in production environment or real server. Use TRUE in development environment
+
+    ini_set('log_errors', TRUE); // Error/Exception file logging engine.
+    ini_set('error_log',  __DIR__ . '/cache/errors.log'); // Logging file path
 }
 
+
+function returnMyStatus (array $responseArray, ResponseThis $response): ResponseThis {
+    try {
+        $response->getBody()->write(json_encode($responseArray, JSON_THROW_ON_ERROR));
+        if ($responseArray['status']) {
+            return $response->withHeader('Content-Type', 'application/json')->withStatus(200);
+        }
+        return $response->withHeader('Content-Type', 'application/json')->withStatus(202);
+    } catch (JsonException $e) {
+        return $response->withHeader('Content-Type', 'application/json')->withStatus(205);
+    }
+}
 
 // view
 $routes = require __DIR__ . '/router/route.php';

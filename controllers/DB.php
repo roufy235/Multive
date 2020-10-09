@@ -39,7 +39,11 @@ class DB {
     }
 
     protected function multiveIsEmailValid($email): bool {
-        return !empty($email) && filter_var($email, FILTER_VALIDATE_EMAIL);
+        if (!empty($email) && filter_var($email, FILTER_VALIDATE_EMAIL)) {
+            return true;
+        }
+        $this->response['statusStr'] = 'Invalid email address';
+        return false;
     }
 
     /** @noinspection DuplicatedCode */
