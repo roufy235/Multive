@@ -10,6 +10,7 @@
 index
 <div id="indexApp">
 
+
 </div>
 <script>
     const baseUrl = '<?php echo getBasePath(true); ?>'

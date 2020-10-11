@@ -21,8 +21,9 @@
     "vlucas/phpdotenv": "^5.2"
   },
   "autoload": {
+    "classmap": ["controllers"],
     "files": [
-      "./controllers/DB.php",
+      "./controllers/SQL.php",
       "./helpers/myFunctions.php",
       "./helpers/cookie.php"
     ]

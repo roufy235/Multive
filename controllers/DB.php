@@ -1,14 +1,14 @@
 <?php
 use PHPMailer\PHPMailer\PHPMailer;
-require_once 'SQL.php';
-require_once 'EMAIL_TEMPLATE_HOLDER.php';
 class DB {
     public array $response = array();
     public PDO $conn;
+    protected EMAIL_TEMPLATE_HOLDER $_emailHolder;
     protected array $_emptyJson;
     protected string $_todayDate;
 
     public function __construct () {
+        $this->_emailHolder = new EMAIL_TEMPLATE_HOLDER();
         $this->response['status'] = false;
         $this->response['statusStr'] = '';
         $this->_todayDate = Date('Y-m-d H:i:s');
