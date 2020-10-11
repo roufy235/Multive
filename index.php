@@ -10,35 +10,15 @@ use Slim\Psr7\Response;
 use Slim\Views\PhpRenderer;
 use Psr\Http\Message\ResponseInterface as ResponseThis;
 use Slim\Routing\RouteContext;
+require __DIR__ . '/vendor/autoload.php';
 
 const REMOTE_ADDR = ['192.168.43.8', 'localhost', '127.0.0.1', '192.168.43.166', '192.168.43.237'];
-require __DIR__ . '/vendor/autoload.php';
 if (!in_array($_SERVER['REMOTE_ADDR'], REMOTE_ADDR)) {
     $dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
 } else {
     $dotenv = Dotenv\Dotenv::createImmutable(__DIR__, '.env.example');
 }
 $dotenv->load();
-
-function getBasePath(bool $isApi = false) : string { // project base path
-    $scriptDir = str_replace('\\', '/', dirname($_SERVER['SCRIPT_NAME']));
-    $uri = (string) parse_url('http://a' . $_SERVER['REQUEST_URI'] ?? '', PHP_URL_PATH);
-    if ($scriptDir !== '/' && stripos($uri, $scriptDir) === 0) {
-        if ($isApi) { //calling for api base path
-            return $scriptDir.'/api';
-        }
-        return $scriptDir;
-    }
-    if ($isApi) {
-        return '/api';
-    }
-    return '';
-}
-
-function getAdminUrlBasePath() : string { // project base path
-    return getBasePath().$_ENV['ADMIN_ROUTE_BASE'];
-}
-
 
 $containerBuilder = new ContainerBuilder();
 /** @noinspection PhpUnhandledExceptionInspection */
@@ -79,17 +59,7 @@ if (in_array($_SERVER['REMOTE_ADDR'], REMOTE_ADDR)) {
 }
 
 
-function returnMyStatus (array $responseArray, ResponseThis $response): ResponseThis {
-    try {
-        $response->getBody()->write(json_encode($responseArray, JSON_THROW_ON_ERROR));
-        if ($responseArray['status']) {
-            return $response->withHeader('Content-Type', 'application/json')->withStatus(200);
-        }
-        return $response->withHeader('Content-Type', 'application/json')->withStatus(202);
-    } catch (JsonException $e) {
-        return $response->withHeader('Content-Type', 'application/json')->withStatus(205);
-    }
-}
+
 
 // view
 $routes = require __DIR__ . '/router/route.php';

@@ -10,6 +10,8 @@ use Slim\App;
 
 return function (App $app) {
 
+    $apiBase = $_ENV['SERVER_API_ROUTE_BASE'];
+
     $verifyAccountMiddleware = function (Request $request, RequestHandler $handler) {
         $verify = new DB();
         $newResponse = new Res();
@@ -38,10 +40,17 @@ return function (App $app) {
         return returnMyStatus($verify->response, $newResponse);
     };
 
-    $app->post('/api/registration', function (Request $request, Response $response) {
+    $app->post($apiBase.'/registration', function (Request $request, Response $response) {
         require_once __DIR__ . '/../controllers/REGISTRATION.php';
         $hello = new REGISTRATION();
         $response->getBody()->write($hello->helloWorld());
         return $response;
+    });
+
+    $app->get($apiBase.'/hello', function (Request $request, Response $response) {
+        require_once __DIR__ . '/../controllers/REGISTRATION.php';
+        $array = array();
+        $array['status'] = true;
+        return returnMyStatus($array, $response);
     });
 };
