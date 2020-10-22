@@ -1,5 +1,7 @@
 <?php
 use PHPMailer\PHPMailer\PHPMailer;
+use Egulias\EmailValidator\EmailValidator;
+use Egulias\EmailValidator\Validation\RFCValidation;
 class DB {
     public array $response = array();
     public PDO $conn;
@@ -35,12 +37,9 @@ class DB {
         return ['jpg', 'jpeg', 'png', 'pdf'];
     }
 
-    protected function multiveIsEmailValid($email): bool {
-        if (!empty($email) && filter_var($email, FILTER_VALIDATE_EMAIL)) {
-            return true;
-        }
-        $this->response['statusStr'] = 'Invalid email address';
-        return false;
+    protected function multiveEmailValidator($email): bool {
+        $validator = new EmailValidator();
+        return $validator->isValid($email, new RFCValidation());
     }
 
     /** @noinspection DuplicatedCode */

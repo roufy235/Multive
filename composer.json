@@ -13,11 +13,13 @@
     "web"
   ],
   "type": "library",
+  "homepage": "https://github.com/roufy235/Multive",
   "license": "MIT",
   "authors": [
     {
       "name": "Abdulrouf Olatunbosun Bello",
-      "email": "roufy235@gmail.com"
+      "email": "roufy235@gmail.com",
+      "homepage": "https://github.com/roufy235"
     }
   ],
   "minimum-stability": "stable",
@@ -29,7 +31,8 @@
     "ext-pdo": "*",
     "phpmailer/phpmailer": "^6.1",
     "php-di/php-di": "^6.2",
-    "vlucas/phpdotenv": "^5.2"
+    "vlucas/phpdotenv": "^5.2",
+    "egulias/email-validator": "^2.1"
   },
   "autoload": {
     "classmap": ["controllers"],
