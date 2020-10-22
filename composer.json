@@ -1,6 +1,17 @@
 {
   "name": "roufy235/multive",
   "description": "A simple php framework",
+  "keywords": [
+    "php",
+    "slim-micro-framework",
+    "rest-api",
+    "mysql",
+    "slim4",
+    "slim",
+    "rest",
+    "api",
+    "web"
+  ],
   "type": "library",
   "license": "MIT",
   "authors": [
