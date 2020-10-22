@@ -77,6 +77,20 @@ class DB {
         return $randomString;
     }
 
+    protected function multiveUploadImage(string $uploadPath, string $tmpImageName, string $base64Image): bool {
+        /** @noinspection PhpUnhandledExceptionInspection */
+        $randNum = random_int(1000, 9999);
+        $extension = pathinfo($tmpImageName, PATHINFO_EXTENSION);
+        if (in_array($extension, $this->validFileExtensionsFunc(), false)) {
+            $filename = '123_'.$randNum.'.'.$extension;
+            $filePathName = $uploadPath.$filename;
+            if (file_put_contents($filePathName, base64_decode($base64Image)) !== false) {
+                return true;
+            }
+        }
+        return false;
+    }
+
     public function multiveMailer($email, $name, $message, string $subject, string $senderEmail) : array {
         $mail = new PHPMailer(true);
         $mail->ClearAddresses();  // each AddAddress add to list

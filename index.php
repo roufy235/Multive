@@ -12,7 +12,7 @@ use Psr\Http\Message\ResponseInterface as ResponseThis;
 use Slim\Routing\RouteContext;
 require __DIR__ . '/vendor/autoload.php';
 
-const REMOTE_ADDR = ['192.168.43.8', 'localhost', '127.0.0.1', '192.168.43.166', '192.168.43.237'];
+const REMOTE_ADDR = ['192.168.43.8', 'localhost', '127.0.0.1', '192.168.43.237'];
 if (!in_array($_SERVER['REMOTE_ADDR'], REMOTE_ADDR)) {
     $dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
 } else {
@@ -23,7 +23,7 @@ $dotenv->load();
 $containerBuilder = new ContainerBuilder();
 /** @noinspection PhpUnhandledExceptionInspection */
 $container = $containerBuilder->build();
-$container->set('upload_directory', __DIR__ . '/uploads/product_images'. DIRECTORY_SEPARATOR);
+$container->set('upload_directory', __DIR__ . '/uploads'. DIRECTORY_SEPARATOR);
 // e.g $path = $this->get('upload_directory');
 AppFactory::setContainer($container);
 
@@ -58,14 +58,11 @@ if (in_array($_SERVER['REMOTE_ADDR'], REMOTE_ADDR)) {
     ini_set('error_log',  __DIR__ . '/cache/errors.log'); // Logging file path
 }
 
-
-
-
-// view
+// views
 $routes = require __DIR__ . '/router/route.php';
 $routes($app);
 
-// server
+// servers
 $routesApi = require __DIR__ . '/server/api.php';
 $routesApi($app);
 

@@ -1,0 +1,51 @@
+[22-Oct-2020 13:38:51 Africa/Lagos] 404 Not Found
+Type: Slim\Exception\HttpNotFoundException
+Code: 404
+Message: Not found.
+File: /opt/lampp/htdocs/WorkStation/Multive_PHP_Framework/vendor/slim/slim/Slim/Middleware/RoutingMiddleware.php
+Line: 93
+Trace: #0 /opt/lampp/htdocs/WorkStation/Multive_PHP_Framework/vendor/slim/slim/Slim/Middleware/RoutingMiddleware.php(59): Slim\Middleware\RoutingMiddleware->performRouting()
+#1 /opt/lampp/htdocs/WorkStation/Multive_PHP_Framework/vendor/slim/slim/Slim/MiddlewareDispatcher.php(140): Slim\Middleware\RoutingMiddleware->process()
+#2 /opt/lampp/htdocs/WorkStation/Multive_PHP_Framework/vendor/slim/slim/Slim/Middleware/ErrorMiddleware.php(107): class@anonymous->handle()
+#3 /opt/lampp/htdocs/WorkStation/Multive_PHP_Framework/vendor/slim/slim/Slim/MiddlewareDispatcher.php(140): Slim\Middleware\ErrorMiddleware->process()
+#4 /opt/lampp/htdocs/WorkStation/Multive_PHP_Framework/index.php(77): class@anonymous->handle()
+#5 /opt/lampp/htdocs/WorkStation/Multive_PHP_Framework/vendor/slim/slim/Slim/MiddlewareDispatcher.php(283): Closure->{closure}()
+#6 /opt/lampp/htdocs/WorkStation/Multive_PHP_Framework/vendor/slim/slim/Slim/MiddlewareDispatcher.php(81): class@anonymous->handle()
+#7 /opt/lampp/htdocs/WorkStation/Multive_PHP_Framework/vendor/slim/slim/Slim/App.php(215): Slim\MiddlewareDispatcher->handle()
+#8 /opt/lampp/htdocs/WorkStation/Multive_PHP_Framework/vendor/slim/slim/Slim/App.php(199): Slim\App->handle()
+#9 /opt/lampp/htdocs/WorkStation/Multive_PHP_Framework/index.php(93): Slim\App->run()
+#10 {main}
+[22-Oct-2020 13:38:51 Africa/Lagos] 404 Not Found
+Type: Slim\Exception\HttpNotFoundException
+Code: 404
+Message: Not found.
+File: /opt/lampp/htdocs/WorkStation/Multive_PHP_Framework/vendor/slim/slim/Slim/Middleware/RoutingMiddleware.php
+Line: 93
+Trace: #0 /opt/lampp/htdocs/WorkStation/Multive_PHP_Framework/vendor/slim/slim/Slim/Middleware/RoutingMiddleware.php(59): Slim\Middleware\RoutingMiddleware->performRouting()
+#1 /opt/lampp/htdocs/WorkStation/Multive_PHP_Framework/vendor/slim/slim/Slim/MiddlewareDispatcher.php(140): Slim\Middleware\RoutingMiddleware->process()
+#2 /opt/lampp/htdocs/WorkStation/Multive_PHP_Framework/vendor/slim/slim/Slim/Middleware/ErrorMiddleware.php(107): class@anonymous->handle()
+#3 /opt/lampp/htdocs/WorkStation/Multive_PHP_Framework/vendor/slim/slim/Slim/MiddlewareDispatcher.php(140): Slim\Middleware\ErrorMiddleware->process()
+#4 /opt/lampp/htdocs/WorkStation/Multive_PHP_Framework/index.php(77): class@anonymous->handle()
+#5 /opt/lampp/htdocs/WorkStation/Multive_PHP_Framework/vendor/slim/slim/Slim/MiddlewareDispatcher.php(283): Closure->{closure}()
+#6 /opt/lampp/htdocs/WorkStation/Multive_PHP_Framework/vendor/slim/slim/Slim/MiddlewareDispatcher.php(81): class@anonymous->handle()
+#7 /opt/lampp/htdocs/WorkStation/Multive_PHP_Framework/vendor/slim/slim/Slim/App.php(215): Slim\MiddlewareDispatcher->handle()
+#8 /opt/lampp/htdocs/WorkStation/Multive_PHP_Framework/vendor/slim/slim/Slim/App.php(199): Slim\App->handle()
+#9 /opt/lampp/htdocs/WorkStation/Multive_PHP_Framework/index.php(93): Slim\App->run()
+#10 {main}
+[22-Oct-2020 13:38:52 Africa/Lagos] 404 Not Found
+Type: Slim\Exception\HttpNotFoundException
+Code: 404
+Message: Not found.
+File: /opt/lampp/htdocs/WorkStation/Multive_PHP_Framework/vendor/slim/slim/Slim/Middleware/RoutingMiddleware.php
+Line: 93
+Trace: #0 /opt/lampp/htdocs/WorkStation/Multive_PHP_Framework/vendor/slim/slim/Slim/Middleware/RoutingMiddleware.php(59): Slim\Middleware\RoutingMiddleware->performRouting()
+#1 /opt/lampp/htdocs/WorkStation/Multive_PHP_Framework/vendor/slim/slim/Slim/MiddlewareDispatcher.php(140): Slim\Middleware\RoutingMiddleware->process()
+#2 /opt/lampp/htdocs/WorkStation/Multive_PHP_Framework/vendor/slim/slim/Slim/Middleware/ErrorMiddleware.php(107): class@anonymous->handle()
+#3 /opt/lampp/htdocs/WorkStation/Multive_PHP_Framework/vendor/slim/slim/Slim/MiddlewareDispatcher.php(140): Slim\Middleware\ErrorMiddleware->process()
+#4 /opt/lampp/htdocs/WorkStation/Multive_PHP_Framework/index.php(77): class@anonymous->handle()
+#5 /opt/lampp/htdocs/WorkStation/Multive_PHP_Framework/vendor/slim/slim/Slim/MiddlewareDispatcher.php(283): Closure->{closure}()
+#6 /opt/lampp/htdocs/WorkStation/Multive_PHP_Framework/vendor/slim/slim/Slim/MiddlewareDispatcher.php(81): class@anonymous->handle()
+#7 /opt/lampp/htdocs/WorkStation/Multive_PHP_Framework/vendor/slim/slim/Slim/App.php(215): Slim\MiddlewareDispatcher->handle()
+#8 /opt/lampp/htdocs/WorkStation/Multive_PHP_Framework/vendor/slim/slim/Slim/App.php(199): Slim\App->handle()
+#9 /opt/lampp/htdocs/WorkStation/Multive_PHP_Framework/index.php(93): Slim\App->run()
+#10 {main}
