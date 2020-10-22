@@ -30,6 +30,7 @@ index
 
 
 </div>
+
 <script>
     const apiBaseUrl = '<?php echo getBasePath(true); ?>'
     const app = new Vue({

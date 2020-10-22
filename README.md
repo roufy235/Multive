@@ -58,7 +58,7 @@ PASSWORD = 'yourMySqlPassword'
 
 ### Compiles and hot-reloads for development
 ```
-php -S localhost:8080 index.php
+$ composer start
 ```
 
 ## License
