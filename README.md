@@ -47,7 +47,7 @@ PASSWORD = 'yourMySqlPassword'
 - [php-di/php-di](https://php-di.org/) A PHP dependency injection container.
 - [phpmailer/phpmailer](https://github.com/PHPMailer/PHPMailer) PHPMailer - A full-featured email creation and transfer class for PHP
 - [slim/php-view](https://github.com/slimphp/PHP-View) This is a renderer for rendering PHP view scripts into a PSR-7 Response object. It works well with Slim Framework 4.
-- [vlucas/phpdotenv](https://github.com/vlucas/phpdotenv) Loads environment variables from `.env` to `getenv()`, `$_ENV` and `$_SERVER` automagically.
+- [vlucas/phpdotenv](https://github.com/vlucas/phpdotenv) Loads environment variables from `.env` to `getenv()`, `$_ENV` and `$_SERVER` automatically.
 
 
 
