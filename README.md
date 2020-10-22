@@ -3,7 +3,7 @@
 Used technologies: `PHP 7, Slim 4, MySQL, dotenv, PHP-DI 6, VueJs, axios`.
 
 [![Software License][ico-license]](LICENSE.md)
-[![Version](https://img.shields.io/packagist/v/roufy235/Multive)](https://packagist.org/packages/roufy235/multive?style=plastic)
+[![Version](https://img.shields.io/packagist/v/roufy235/Multive?style=plastic)](https://packagist.org/packages/roufy235/multive)
 ![Code Size](https://img.shields.io/github/languages/code-size/roufy235/Multive?style=plastic)
 ![Downloads](https://img.shields.io/packagist/dm/roufy235/Multive?style=plastic)
 
