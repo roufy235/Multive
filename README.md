@@ -19,7 +19,7 @@ Used technologies: `PHP 7, Slim 4, MySQL, dotenv, PHP-DI 6`.
 
 ## Installation
 
-You can create a new project running the following command:
+You can create a new project by running the following command:
 
 ```bash
 $ composer create-project roufy235/multive
