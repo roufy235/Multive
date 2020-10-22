@@ -1,4 +1,4 @@
-# Multive - PHP Web Framework
+# **Multive** - PHP Web Framework
 
 Used technologies: `PHP 7, Slim 4, MySQL, dotenv, PHP-DI 6, VueJs, axios`.
 
