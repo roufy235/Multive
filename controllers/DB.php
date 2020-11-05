@@ -91,7 +91,7 @@ class DB {
         return false;
     }
 
-    public function multiveMailer($email, $name, $message, string $subject, string $senderEmail) : array {
+    public function multiveMailer($email, $name, $message, string $subject) : array {
         $mail = new PHPMailer(true);
         $mail->ClearAddresses();  // each AddAddress add to list
         $mail->ClearCCs();
@@ -105,12 +105,12 @@ class DB {
         $mail->Username = $_ENV['PHPMAILER_USERNAME'];
         $mail->Password = $_ENV['PHPMAILER_PASSWORD'];
         try {
-            $mail->addReplyTo($senderEmail, $name);
-            $mail->setFrom($senderEmail, $name);
+            $mail->addReplyTo($_ENV['PHPMAILER_USERNAME'], '');
+            $mail->setFrom($_ENV['PHPMAILER_USERNAME'], '');
             $mail->Subject = $subject;
             $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
             $mail->Body = $message;
-            $mail->addAddress($email, "Admin");
+            $mail->addAddress($email, $name);
             $mail->send();
             $this->response['status'] = true;
         } catch (Exception $e) {
