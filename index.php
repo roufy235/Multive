@@ -20,6 +20,8 @@ if (!in_array($_SERVER['REMOTE_ADDR'], REMOTE_ADDR)) {
 }
 $dotenv->load();
 
+require __DIR__ . '/helpers/cookie.php';
+
 $containerBuilder = new ContainerBuilder();
 /** @noinspection PhpUnhandledExceptionInspection */
 $container = $containerBuilder->build();

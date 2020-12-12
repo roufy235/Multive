@@ -39,7 +39,7 @@
     "files": [
       "./controllers/SQL.php",
       "./helpers/myFunctions.php",
-      "./helpers/cookie.php"
+      "./helpers/session.php"
     ]
   },
   "scripts": {
