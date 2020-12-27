@@ -1,6 +1,6 @@
 # **Multive** - PHP Web Framework
 
-Used technologies: `PHP 7, Slim 4, MySQL, dotenv, PHP-DI 6, VueJs, axios`.
+Used technologies: `PHP 7.3^, Slim 4, MySQL, dotenv, PHP-DI 6, VueJs, axios`.
 
 [![Software License][ico-license]](LICENSE.md)
 [![Version](https://img.shields.io/packagist/v/roufy235/Multive?style=plastic)](https://packagist.org/packages/roufy235/multive)
