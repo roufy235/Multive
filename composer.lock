@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "436fc90ef49e3b41791a79b98adecf03",
+    "content-hash": "0f9f8d77cbbf0887fb436b09d66a52f0",
     "packages": [
         {
             "name": "doctrine/lexer",
@@ -1077,6 +1077,65 @@
                 "source": "https://github.com/ralouphie/getallheaders/tree/develop"
             },
             "time": "2019-03-08T08:55:37+00:00"
+        },
+        {
+            "name": "rbdwllr/reallysimplejwt",
+            "version": "3.1.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/RobDWaller/ReallySimpleJWT.git",
+                "reference": "2954e559df545c37763a6295726cded288a02277"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/RobDWaller/ReallySimpleJWT/zipball/2954e559df545c37763a6295726cded288a02277",
+                "reference": "2954e559df545c37763a6295726cded288a02277",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.2.0"
+            },
+            "require-dev": {
+                "infection/infection": "^0.14",
+                "phpbench/phpbench": "^0.16",
+                "phploc/phploc": "^5.0",
+                "phpmd/phpmd": "^2.7",
+                "phpstan/phpstan": "^0.11",
+                "phpunit/phpunit": "^8.0",
+                "roave/backward-compatibility-check": "^3.0",
+                "sebastian/phpcpd": "^4.1",
+                "squizlabs/php_codesniffer": "^3.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "ReallySimpleJWT\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Rob Waller",
+                    "email": "rdwaller1984@gmail.com"
+                }
+            ],
+            "description": "A really simple library to generate user authentication JSON Web Tokens.",
+            "keywords": [
+                "Authentication",
+                "json",
+                "json web tokens",
+                "jwt",
+                "php",
+                "tokens"
+            ],
+            "support": {
+                "issues": "https://github.com/RobDWaller/ReallySimpleJWT/issues",
+                "source": "https://github.com/RobDWaller/ReallySimpleJWT/tree/3.1.1"
+            },
+            "time": "2020-10-15T07:24:22+00:00"
         },
         {
             "name": "slim/php-view",

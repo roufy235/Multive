@@ -9,6 +9,26 @@
     <h1>
         hello <?php echo $name; ?>
     </h1>
+    <h2>
+        <?php
+        echo $token;
+        ?>
+    </h2>
+    <h2>
+        <?php
+        echo $result;
+        ?>
+    </h2>
+    <h2>
+        <?php
+        print_r($payload);
+        ?>
+    </h2>
+    <h2>
+        <?php
+        print_r($header);
+        ?>
+    </h2>
     <a href="<?php print htmlspecialchars(getBasePath()); ?>/">contact us</a>
 </body>
 </html>
