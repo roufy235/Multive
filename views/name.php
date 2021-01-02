@@ -9,11 +9,11 @@
     <h1>
         hello <?php echo $name; ?>
     </h1>
-    <h2>
+    <pre>
         <?php
         echo $token;
         ?>
-    </h2>
+    </pre>
     <h2>
         <?php
         echo $result;

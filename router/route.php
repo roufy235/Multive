@@ -20,16 +20,14 @@ return function (App $app) {
         $renderer = new PhpRenderer(__DIR__ . '/../views/');
 
         $userId = [
-            'username' => 'ade',
-            'surname' => 'bello'
+            'username' => 'ertyuiop',
+            'surname' => 'hfhfhfhfhfh'
         ];
         $secret = 'sec!ReT423*&';
         $expiration = time() + 3600;
         $issuer = 'localhost';
 
         $token = Token::create($userId, $secret, $expiration, $issuer);
-
-
         $result = Token::validate($token, $secret);
         $payload = Token::getPayload($token, $secret);
         $header = Token::getHeader($token, $secret);
