@@ -16,6 +16,13 @@ return function (App $app) {
         ]);
     });
 
+    $app->get('/testVueThree', function ($request, $response, $args) {
+        $renderer = new PhpRenderer(__DIR__ . '/../views/');
+        return $renderer->render($response, "vueThreeTest.php", [
+
+        ]);
+    });
+
     $app->get('/hello/{name}', function ($request, $response, $args) {
         $renderer = new PhpRenderer(__DIR__ . '/../views/');
 
