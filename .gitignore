@@ -3,3 +3,6 @@
 vendor
 node_modules
 .env
+cache/errors.log
+.idea
+.DS_Store
