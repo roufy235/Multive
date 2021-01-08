@@ -5,8 +5,8 @@
          verbose="true"
          stopOnFailure="true">
     <testsuites>
-        <testsuite name="unit">
-            <directory suffix=".php">tests</directory>
+        <testsuite name="Sample">
+            <directory>tests</directory>
         </testsuite>
     </testsuites>
 </phpunit>
