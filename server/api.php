@@ -40,6 +40,21 @@ return function (App $app) {
         return returnMyStatus($verify->response, $newResponse);
     };
 
+    $tokenBasedAuthMiddleware = function (Request $request, RequestHandler $handler) {
+        $newResponse = new Res();
+        $verify = new DB();
+        $bearerToken = TokenGenerator::getBearerToken($request->getHeaders()['Authorization'][0] ?? ''); // token
+        if (TokenGenerator::validateToken($bearerToken)) {
+            $tokenPayload = TokenGenerator::getPayload($bearerToken);
+            $response = $handler->handle($request->withAttribute('tokenPayload', $tokenPayload));
+            $routeResponse = $response->getBody();
+            $verify->response = json_decode($routeResponse, true, 512, JSON_THROW_ON_ERROR);
+        } else {
+            $verify->response['statusStr'] = 'Invalid token';
+        }
+        return returnMyStatus($verify->response, $newResponse);
+    };
+
     $app->post($apiBase.'/registration', function (Request $request, Response $response) {
         require_once __DIR__ . '/../controllers/REGISTRATION.php';
         $hello = new REGISTRATION();
