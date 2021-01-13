@@ -38,6 +38,7 @@
   "autoload": {
     "classmap": ["controllers/", "tests/"],
     "files": [
+      "./helpers/TokenGenerator.php",
       "./controllers/SQL.php",
       "./helpers/myFunctions.php",
       "./helpers/session.php"
