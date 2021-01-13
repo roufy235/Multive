@@ -6,7 +6,7 @@ use ReallySimpleJWT\Token;
 class TokenGenerator {
 
     private static function secretKey() : string {
-        return 'sec!NearexpirydealsT235covirtue*&';
+        return $_ENV['TOKEN_SECRET'];
     }
 
     private static function months(int $numMonth) : int {
