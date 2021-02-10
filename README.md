@@ -21,7 +21,7 @@ Used technologies: `PHP 7.3^, Slim 4, MySQL, dotenv, PHP-DI 6, VueJs, Axios`.
 
 ## Quickstart guide
 
-You can create a new project by running the following command:
+You can create a new project by running this command:
 ```bash
 $ composer create-project roufy235/multive
 ```
