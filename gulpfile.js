@@ -12,6 +12,7 @@ const cssnano = require('cssnano');
 const replace = require('gulp-replace');
 
 // file path variables
+const allCompiledJsFilename = '_9550808079.js';
 const files = {
     scssPath: 'assets/app/scss/**/*.scss',
     jsPath: 'assets/app/js/**/*.js',
@@ -34,7 +35,7 @@ function jsTask(){
         files.jsPath
         //,'!' + 'includes/js/jquery.min.js', // to exclude any specific files
     ])
-        .pipe(concat('all.js'))
+        .pipe(concat(allCompiledJsFilename))
         .pipe(uglify())
         .pipe(dest(files.distPath)
         );

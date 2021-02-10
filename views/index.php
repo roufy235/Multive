@@ -20,15 +20,17 @@
   <meta name="twitter:site" content=""/>
   <meta name="twitter:description" content=""/>
   <meta name="twitter:image" content=""/>
-  <title>Title</title>
+  <title>Multive</title>
   <?php
     require_once 'layouts/header.php';
     ?>
 </head>
 <body>
-index
 <div id="indexApp">
 
+    <h1>
+        Multive
+    </h1>
 
 </div>
 <?php
