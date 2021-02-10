@@ -1,5 +1,15 @@
-$appColor : #008000;
+$appColor : #000000;
+$backColor : #ffffff;
 
 body {
-  background-color: $appColor;
+  background-color: $backColor;
+}
+
+h1 {
+  font-size: 100px;
+  color: $appColor;
+  margin: 0 auto;
+  width: 50%;
+  text-align: center;
+  text-decoration: underline;
 }

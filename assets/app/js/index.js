@@ -1,17 +1,21 @@
-const app = new Vue({
-    el: '#indexApp',
+const pageApp = {
+    data() {
+        return {
+
+        }
+    },
     created() {
-        const formData = new FormData();
         axios.get(apiBaseUrl + '/registration')
             .then(({data, status}) => {
                 if (status === 200) {
-                    alert(data.statusStr)
+                    console.log('Connected to server!')
                 } else {
-                    alert('error')
+                    console.error('Unable to connect to the server')
                 }
             })
             .catch((error) => {
                 alert(error)
             });
     }
-});
+}
+Vue.createApp(pageApp).mount('#indexApp');

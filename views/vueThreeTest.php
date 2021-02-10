@@ -40,17 +40,20 @@ index
             }
         },
         created() {
-            const data = new FormData();
-            axios.post(apiBaseUrl + '/registration', data)
+            axios.get(apiBaseUrl + '/registration')
                 .then(({data, status}) => {
-                    alert(data)
+                    if (status === 200) {
+                        console.log('Connected to server!')
+                    } else {
+                        console.error('Unable to connect to the server')
+                    }
                 })
                 .catch((error) => {
                     alert(error)
                 });
         }
     }
-    Vue.createApp(pageApp).mount('#indexApp')
+    Vue.createApp(pageApp).mount('#indexApp');
 </script>
 </body>
 </html>
