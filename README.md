@@ -1,6 +1,6 @@
 # **Multive** - PHP Web Framework
 
-Used technologies: `PHP 7.3^, Slim 4, MySQL, dotenv, PHP-DI 6, VueJs, axios`.
+Used technologies: `PHP 7.3^, Slim 4, MySQL, dotenv, PHP-DI 6, VueJs, Axios`.
 
 [![Software License][ico-license]](LICENSE.md)
 [![Version](https://img.shields.io/packagist/v/roufy235/Multive?style=plastic)](https://packagist.org/packages/roufy235/multive)
@@ -14,16 +14,24 @@ Used technologies: `PHP 7.3^, Slim 4, MySQL, dotenv, PHP-DI 6, VueJs, axios`.
 ## Requirement
 
 - [Composer](https://getcomposer.org/).
+- [NodeJs](https://nodejs.org/).
+- [GulpJs](https://gulpjs.com/).
 - PHP 7.3+.
 - MySQL/MariaDB.
 
-## Installation
+## Quickstart guide
 
 You can create a new project by running the following command:
-
 ```bash
 $ composer create-project roufy235/multive
 ```
+* Install [Node.js](https://nodejs.org/en/) if you don't have it yet.
+* Install `gulp-cli` if you don't have it yet.
+```bash
+$ npm install --global gulp-cli
+```
+* Run `npm install`
+* Run `gulp` to run the default Gulp task
 
 #### Configure your connection to MySQL Server:
 

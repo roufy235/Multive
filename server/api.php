@@ -55,15 +55,13 @@ return function (App $app) {
         return returnMyStatus($verify->response, $newResponse);
     };
 
-    $app->post($apiBase.'/registration', function (Request $request, Response $response) {
-        require_once __DIR__ . '/../controllers/REGISTRATION.php';
+    $app->get($apiBase.'/registration', function (Request $request, Response $response) {
         $hello = new REGISTRATION();
-        $response->getBody()->write($hello->helloWorld());
-        return $response;
+        $responseArray = $hello->helloWorld();
+        return returnMyStatus($responseArray, $response);
     });
 
     $app->get($apiBase.'/hello', function (Request $request, Response $response) {
-        require_once __DIR__ . '/../controllers/REGISTRATION.php';
         $array = array();
         $array['status'] = true;
         return returnMyStatus($array, $response);
