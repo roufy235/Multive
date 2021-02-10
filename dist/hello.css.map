@@ -1,0 +1,1 @@
+{"version":3,"sources":["hello.scss"],"names":[],"mappings":"AAEA,KACE,qBAHiB","file":"hello.css","sourcesContent":["$appColor : #000000;\n\nbody {\n  background-color: $appColor;\n}\n"]}

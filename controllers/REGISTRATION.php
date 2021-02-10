@@ -1,8 +1,10 @@
 <?php
 class REGISTRATION extends DB {
 
-    public function helloWorld() : string {
-        return 'Hello World!';
+    public function helloWorld() : array {
+        $this->response['statusStr'] = 'Hello World!';
+        $this->response['status'] = true;
+        return $this->response;
     }
 
 }

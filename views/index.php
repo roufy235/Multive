@@ -21,8 +21,9 @@
   <meta name="twitter:description" content=""/>
   <meta name="twitter:image" content=""/>
   <title>Title</title>
-  <script src="<?php echo getBasePath(); ?>/assets/js/vue@2.6.12.js" type="text/javascript"></script>
-  <script src="<?php echo getBasePath(); ?>/assets/js/axios.min.js" type="text/javascript"></script>
+  <?php
+    require_once 'layouts/header.php';
+    ?>
 </head>
 <body>
 index
@@ -30,22 +31,8 @@ index
 
 
 </div>
-
-<script>
-    const apiBaseUrl = '<?php echo getBasePath(true); ?>'
-    const app = new Vue({
-        el: '#indexApp',
-        created() {
-            const data = new FormData();
-            axios.post(apiBaseUrl + '/registration', data)
-                .then(({data, status}) => {
-                    alert(data)
-                })
-                .catch((error) => {
-                    alert(error)
-                });
-        }
-    });
-</script>
+<?php
+require_once 'layouts/footer.php';
+?>
 </body>
 </html>
