@@ -1,8 +1,6 @@
 ![Multive Logo](/assets/images/logo.png "Multive")
 # **Multive** - PHP Web Framework
 
-Used technologies: `PHP 7.3^, Slim 4, MySQL, dotenv, PHP-DI 6, VueJs, Axios`.
-
 [![Software License][ico-license]](LICENSE.md)
 [![Version](https://img.shields.io/packagist/v/roufy235/Multive?style=plastic)](https://packagist.org/packages/roufy235/multive)
 ![Code Size](https://img.shields.io/github/languages/code-size/roufy235/Multive?style=plastic)
@@ -49,7 +47,7 @@ PASSWORD = 'yourMySqlPassword'
 
 ## :package: DEPENDENCIES:
 
-### LIST OF REQUIRE DEPENDENCIES:
+### LIST OF BUNDLED DEPENDENCIES:
 
 - [slim/slim](https://github.com/slimphp/Slim) Slim is a PHP micro framework that helps you quickly write simple yet powerful web applications and APIs.
 - [slim/psr7](https://github.com/slimphp/Slim-Psr7) PSR-7 implementation for use with Slim 4.
