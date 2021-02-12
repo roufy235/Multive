@@ -1,3 +1,4 @@
+![Multive Logo](/assets/images/logo.png "Multive")
 # **Multive** - PHP Web Framework
 
 Used technologies: `PHP 7.3^, Slim 4, MySQL, dotenv, PHP-DI 6, VueJs, Axios`.
