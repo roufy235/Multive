@@ -2,6 +2,8 @@
 session_start();
 date_default_timezone_set('Africa/Lagos');
 use DI\ContainerBuilder;
+use Monolog\Handler\StreamHandler;
+use Monolog\Logger;
 use Psr\Http\Message\ServerRequestInterface;
 use Psr\Http\Server\RequestHandlerInterface;
 use Slim\Exception\HttpNotFoundException;
@@ -13,12 +15,25 @@ use Slim\Routing\RouteContext;
 require __DIR__ . '/vendor/autoload.php';
 
 const REMOTE_ADDR = ['192.168.43.8', 'localhost', '127.0.0.1', '192.168.43.237'];
+$isLiveServer = false;
 if (!in_array($_SERVER['REMOTE_ADDR'], REMOTE_ADDR)) {
     $dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
+    $isLiveServer = true;
 } else {
     $dotenv = Dotenv\Dotenv::createImmutable(__DIR__, '.env.example');
 }
 $dotenv->load();
+try {
+    $dotenv->required(['DB_HOST', 'DB_NAME', 'USER', 'PASSWORD', 'JAVASCRIPT_VERSION_CONTROL', 'PROJECT_WEB_DOMAIN_URL']);
+    if ($isLiveServer) {
+        $dotenv->required(['DB_HOST', 'DB_NAME', 'USER', 'PASSWORD', 'JAVASCRIPT_VERSION_CONTROL', 'PROJECT_WEB_DOMAIN_URL'])->notEmpty();
+    } else {
+        $dotenv->required(['DB_HOST', 'DB_NAME', 'USER', 'JAVASCRIPT_VERSION_CONTROL', 'PROJECT_WEB_DOMAIN_URL'])->notEmpty();
+    }
+    $dotenv->required('JAVASCRIPT_VERSION_CONTROL')->isInteger();
+} catch (RuntimeException $e) {
+    die('dotenv file :: ' .$e->getMessage());
+}
 
 require __DIR__ . '/helpers/cookie.php';
 
@@ -27,6 +42,14 @@ $containerBuilder = new ContainerBuilder();
 $container = $containerBuilder->build();
 $container->set('upload_directory', __DIR__ . '/uploads'. DIRECTORY_SEPARATOR);
 // e.g $path = $this->get('upload_directory');
+$container->set('logger', function() : Logger {
+    $name = $_ENV['PROJECT_NAME'];
+    $logger = new Logger($name);
+    $file_handler = new StreamHandler(__DIR__ . '/cache/'. $name .'.log', Logger::WARNING);
+    $logger->pushHandler($file_handler);
+    return $logger;
+});
+// e.g $this->get('logger')->error('Bar', ['hello', __FILE__, __LINE__]);
 AppFactory::setContainer($container);
 
 // Create App

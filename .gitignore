@@ -6,3 +6,4 @@ node_modules
 cache/errors.log
 .idea
 .DS_Store
+dist
