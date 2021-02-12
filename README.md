@@ -45,29 +45,6 @@ USER = 'yourMySqlUsername'
 PASSWORD = 'yourMySqlPassword'
 ```
 
-## :package: DEPENDENCIES:
-
-### LIST OF BUNDLED DEPENDENCIES:
-
-- [slim/slim](https://github.com/slimphp/Slim) Slim is a PHP micro framework that helps you quickly write simple yet powerful web applications and APIs.
-- [slim/psr7](https://github.com/slimphp/Slim-Psr7) PSR-7 implementation for use with Slim 4.
-- [php-di/php-di](https://php-di.org/) A PHP dependency injection container.
-- [egulias/email-validator](https://github.com/egulias/EmailValidator) PHP Email address validator library.
-- [phpmailer/phpmailer](https://github.com/PHPMailer/PHPMailer) PHPMailer - A full-featured email creation and transfer class for PHP
-- [slim/php-view](https://github.com/slimphp/PHP-View) This is a renderer for rendering PHP view scripts into a PSR-7 Response object. It works well with Slim Framework 4.
-- [vlucas/phpdotenv](https://github.com/vlucas/phpdotenv) Loads environment variables from `.env` to `getenv()`, `$_ENV` and `$_SERVER` automatically.
-
-
-
-## Built On
-* [Slim Framework](http://www.slimframework.com/) - Slim is a PHP micro framework that helps you quickly write simple yet powerful web applications and APIs.
-
-
-### Compiles and hot-reloads for development
-```
-$ composer start
-```
-
 ## License
 
 The Multive Framework is licensed under the MIT license. See [License File](LICENSE.md) for more information.
