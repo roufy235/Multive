@@ -65,17 +65,11 @@ class DB {
         return $timeMsg;
     }
 
-    protected function multiveGenerateToken (int $length): string {
-        $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
-        $charactersLength = strlen($characters);
-        $randomString = '';
-        for ($i = 0; $i < $length; $i++) {
-            try {
-                $randomString .= $characters[random_int(0, $charactersLength - 1)];
-            } catch (Exception $e) {}
-        }
-        return $randomString;
+    protected function multiveGenerateToken (): string {
+        /** @noinspection PhpUnhandledExceptionInspection */
+        return bin2hex(random_bytes(100));
     }
+
 
     protected function multiveUploadImage(string $uploadPath, string $tmpImageName, string $base64Image): bool {
         /** @noinspection PhpUnhandledExceptionInspection */
