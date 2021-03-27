@@ -34,7 +34,8 @@
     "vlucas/phpdotenv": "^5.2",
     "egulias/email-validator": "^2.1",
     "rbdwllr/reallysimplejwt": "^3.1",
-    "monolog/monolog": "^2.2"
+    "monolog/monolog": "^2.2",
+    "slim/csrf": "^1.2"
   },
   "autoload": {
     "classmap": ["controllers/", "tests/"],
