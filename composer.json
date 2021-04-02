@@ -24,6 +24,7 @@
   ],
   "minimum-stability": "stable",
   "require": {
+    "php": "^7.3",
     "slim/slim": "4.*",
     "slim/psr7": "^1.2",
     "slim/php-view": "^3.0",
@@ -50,7 +51,7 @@
     "post-root-package-install": [
       "php -r \"file_exists('.env') || copy('.env.example', '.env');\""
     ],
-    "start": "php -S localhost:8080 index.php"
+    "start": "php -S localhost:3000 index.php"
   },
   "require-dev": {
     "roave/security-advisories": "dev-master",
