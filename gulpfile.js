@@ -43,9 +43,9 @@ function jsTask(){
 
 // cache busting task
 function cacheBustTask(){
-    const cbString = new Date().getTime();
-    return src(['index.html'])
-        .pipe(replace(/cb=\d+/g, 'cb=' + cbString))
+    const cbString = new Date().getTime().toString().trim();
+    return src(['.env.example', '.env'])
+        .pipe(replace( /JAVASCRIPT_VERSION_CONTROL=\d+/g, 'JAVASCRIPT_VERSION_CONTROL=' + cbString))
         .pipe(dest('.'));
 }
 // Watch task
@@ -54,7 +54,7 @@ function watchTask(){
         {interval: 1000, usePolling: true}, //Makes docker work
         series(
             parallel(scssTask, jsTask),
-            //cacheBustTask
+            cacheBustTask
         )
     );
 }
@@ -62,6 +62,6 @@ function watchTask(){
 // Default task
 exports.default = series(
     parallel(scssTask, jsTask),
-    //cacheBustTask,
+    cacheBustTask,
     watchTask
 );

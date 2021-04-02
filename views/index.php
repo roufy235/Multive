@@ -20,18 +20,36 @@
   <meta name="twitter:site" content=""/>
   <meta name="twitter:description" content=""/>
   <meta name="twitter:image" content=""/>
-  <title>Multive</title>
+  <title>Multive - PHP Web Framework</title>
   <?php
     require_once 'layouts/header.php';
     ?>
 </head>
 <body>
+
+<div class="area" >
+    <ul class="circles">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+</div >
+
 <div id="indexApp">
-
-    <h1>
-        Multive
-    </h1>
-
+    <div class="centered third">
+        <div class="second">
+            <div class="first">
+                <img src="<?php echo getBasePath(); ?>/assets/images/logo.png" alt="Multive">
+            </div>
+        </div>
+    </div>
 </div>
 <?php
 require_once 'layouts/footer.php';
