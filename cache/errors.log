@@ -814,3 +814,20 @@ Trace: #0 /Applications/XAMPP/xamppfiles/htdocs/WorkStation/Multive/vendor/slim/
 #8 /Applications/XAMPP/xamppfiles/htdocs/WorkStation/Multive/vendor/slim/slim/Slim/App.php(199): Slim\App->handle(Object(Slim\Psr7\Request))
 #9 /Applications/XAMPP/xamppfiles/htdocs/WorkStation/Multive/index.php(115): Slim\App->run()
 #10 {main}
+[02-Apr-2021 22:11:45 Africa/Lagos] 404 Not Found
+Type: Slim\Exception\HttpNotFoundException
+Code: 404
+Message: Not found.
+File: /Applications/XAMPP/xamppfiles/htdocs/WorkStation/Multive/vendor/slim/slim/Slim/Middleware/RoutingMiddleware.php
+Line: 91
+Trace: #0 /Applications/XAMPP/xamppfiles/htdocs/WorkStation/Multive/vendor/slim/slim/Slim/Middleware/RoutingMiddleware.php(58): Slim\Middleware\RoutingMiddleware->performRouting(Object(Slim\Psr7\Request))
+#1 /Applications/XAMPP/xamppfiles/htdocs/WorkStation/Multive/vendor/slim/slim/Slim/MiddlewareDispatcher.php(147): Slim\Middleware\RoutingMiddleware->process(Object(Slim\Psr7\Request), Object(Psr\Http\Server\RequestHandlerInterface@anonymous))
+#2 /Applications/XAMPP/xamppfiles/htdocs/WorkStation/Multive/vendor/slim/slim/Slim/Middleware/ErrorMiddleware.php(107): Psr\Http\Server\RequestHandlerInterface@anonymous->handle(Object(Slim\Psr7\Request))
+#3 /Applications/XAMPP/xamppfiles/htdocs/WorkStation/Multive/vendor/slim/slim/Slim/MiddlewareDispatcher.php(147): Slim\Middleware\ErrorMiddleware->process(Object(Slim\Psr7\Request), Object(Psr\Http\Server\RequestHandlerInterface@anonymous))
+#4 /Applications/XAMPP/xamppfiles/htdocs/WorkStation/Multive/index.php(99): Psr\Http\Server\RequestHandlerInterface@anonymous->handle(Object(Slim\Psr7\Request))
+#5 /Applications/XAMPP/xamppfiles/htdocs/WorkStation/Multive/vendor/slim/slim/Slim/MiddlewareDispatcher.php(313): Closure->{closure}(Object(Slim\Psr7\Request), Object(Psr\Http\Server\RequestHandlerInterface@anonymous))
+#6 /Applications/XAMPP/xamppfiles/htdocs/WorkStation/Multive/vendor/slim/slim/Slim/MiddlewareDispatcher.php(81): Psr\Http\Server\RequestHandlerInterface@anonymous->handle(Object(Slim\Psr7\Request))
+#7 /Applications/XAMPP/xamppfiles/htdocs/WorkStation/Multive/vendor/slim/slim/Slim/App.php(215): Slim\MiddlewareDispatcher->handle(Object(Slim\Psr7\Request))
+#8 /Applications/XAMPP/xamppfiles/htdocs/WorkStation/Multive/vendor/slim/slim/Slim/App.php(199): Slim\App->handle(Object(Slim\Psr7\Request))
+#9 /Applications/XAMPP/xamppfiles/htdocs/WorkStation/Multive/index.php(115): Slim\App->run()
+#10 {main}
