@@ -2,6 +2,7 @@
 session_start();
 date_default_timezone_set('Africa/Lagos');
 use DI\ContainerBuilder;
+use Medoo\Medoo;
 use Monolog\Handler\StreamHandler;
 use Monolog\Logger;
 use Psr\Http\Message\ServerRequestInterface;
@@ -50,6 +51,17 @@ $container->set('logger', function() : Logger {
     return $logger;
 });
 // e.g $this->get('logger')->error('Bar', ['hello', __FILE__, __LINE__]);
+
+$container->set('databaseConnection', function() : array {
+    return [
+        'database_type' => 'mysql',
+        'database_name' => $_ENV['DB_NAME'],
+        'server' => 'localhost',
+        'username' => $_ENV['USER'],
+        'password' => $_ENV['PASSWORD']
+    ];
+});
+
 AppFactory::setContainer($container);
 
 // Create App

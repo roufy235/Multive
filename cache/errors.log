@@ -831,3 +831,274 @@ Trace: #0 /Applications/XAMPP/xamppfiles/htdocs/WorkStation/Multive/vendor/slim/
 #8 /Applications/XAMPP/xamppfiles/htdocs/WorkStation/Multive/vendor/slim/slim/Slim/App.php(199): Slim\App->handle(Object(Slim\Psr7\Request))
 #9 /Applications/XAMPP/xamppfiles/htdocs/WorkStation/Multive/index.php(115): Slim\App->run()
 #10 {main}
+[05-Apr-2021 07:37:51 Africa/Lagos] Slim Application Error
+Type: PDOException
+Code: 0
+Message: SQLSTATE[HY000] [1049] Unknown database 'db_multive'
+File: /Applications/XAMPP/xamppfiles/htdocs/WorkStation/Multive/vendor/catfan/medoo/src/Medoo.php
+Line: 323
+Trace: #0 /Applications/XAMPP/xamppfiles/htdocs/WorkStation/Multive/router/route.php(14): Medoo\Medoo->__construct(Array)
+#1 /Applications/XAMPP/xamppfiles/htdocs/WorkStation/Multive/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php(43): Closure->{closure}(Object(Slim\Psr7\Request), Object(Slim\Psr7\Response), Array)
+#2 /Applications/XAMPP/xamppfiles/htdocs/WorkStation/Multive/vendor/slim/slim/Slim/Routing/Route.php(384): Slim\Handlers\Strategies\RequestResponse->__invoke(Object(Closure), Object(Slim\Psr7\Request), Object(Slim\Psr7\Response), Array)
+#3 /Applications/XAMPP/xamppfiles/htdocs/WorkStation/Multive/vendor/slim/slim/Slim/MiddlewareDispatcher.php(81): Slim\Routing\Route->handle(Object(Slim\Psr7\Request))
+#4 /Applications/XAMPP/xamppfiles/htdocs/WorkStation/Multive/vendor/slim/slim/Slim/MiddlewareDispatcher.php(81): Slim\MiddlewareDispatcher->handle(Object(Slim\Psr7\Request))
+#5 /Applications/XAMPP/xamppfiles/htdocs/WorkStation/Multive/vendor/slim/slim/Slim/Routing/Route.php(341): Slim\MiddlewareDispatcher->handle(Object(Slim\Psr7\Request))
+#6 /Applications/XAMPP/xamppfiles/htdocs/WorkStation/Multive/vendor/slim/slim/Slim/Routing/RouteRunner.php(84): Slim\Routing\Route->run(Object(Slim\Psr7\Request))
+#7 /Applications/XAMPP/xamppfiles/htdocs/WorkStation/Multive/vendor/slim/slim/Slim/Middleware/BodyParsingMiddleware.php(68): Slim\Routing\RouteRunner->handle(Object(Slim\Psr7\Request))
+#8 /Applications/XAMPP/xamppfiles/htdocs/WorkStation/Multive/vendor/slim/slim/Slim/MiddlewareDispatcher.php(147): Slim\Middleware\BodyParsingMiddleware->process(Object(Slim\Psr7\Request), Object(Slim\Routing\RouteRunner))
+#9 /Applications/XAMPP/xamppfiles/htdocs/WorkStation/Multive/index.php(76): Psr\Http\Server\RequestHandlerInterface@anonymous->handle(Object(Slim\Psr7\Request))
+#10 /Applications/XAMPP/xamppfiles/htdocs/WorkStation/Multive/vendor/slim/slim/Slim/MiddlewareDispatcher.php(313): Closure->{closure}(Object(Slim\Psr7\Request), Object(Psr\Http\Server\RequestHandlerInterface@anonymous))
+#11 /Applications/XAMPP/xamppfiles/htdocs/WorkStation/Multive/vendor/slim/slim/Slim/Middleware/RoutingMiddleware.php(59): Psr\Http\Server\RequestHandlerInterface@anonymous->handle(Object(Slim\Psr7\Request))
+#12 /Applications/XAMPP/xamppfiles/htdocs/WorkStation/Multive/vendor/slim/slim/Slim/MiddlewareDispatcher.php(147): Slim\Middleware\RoutingMiddleware->process(Object(Slim\Psr7\Request), Object(Psr\Http\Server\RequestHandlerInterface@anonymous))
+#13 /Applications/XAMPP/xamppfiles/htdocs/WorkStation/Multive/vendor/slim/slim/Slim/Middleware/ErrorMiddleware.php(107): Psr\Http\Server\RequestHandlerInterface@anonymous->handle(Object(Slim\Psr7\Request))
+#14 /Applications/XAMPP/xamppfiles/htdocs/WorkStation/Multive/vendor/slim/slim/Slim/MiddlewareDispatcher.php(147): Slim\Middleware\ErrorMiddleware->process(Object(Slim\Psr7\Request), Object(Psr\Http\Server\RequestHandlerInterface@anonymous))
+#15 /Applications/XAMPP/xamppfiles/htdocs/WorkStation/Multive/index.php(111): Psr\Http\Server\RequestHandlerInterface@anonymous->handle(Object(Slim\Psr7\Request))
+#16 /Applications/XAMPP/xamppfiles/htdocs/WorkStation/Multive/vendor/slim/slim/Slim/MiddlewareDispatcher.php(313): Closure->{closure}(Object(Slim\Psr7\Request), Object(Psr\Http\Server\RequestHandlerInterface@anonymous))
+#17 /Applications/XAMPP/xamppfiles/htdocs/WorkStation/Multive/vendor/slim/slim/Slim/MiddlewareDispatcher.php(81): Psr\Http\Server\RequestHandlerInterface@anonymous->handle(Object(Slim\Psr7\Request))
+#18 /Applications/XAMPP/xamppfiles/htdocs/WorkStation/Multive/vendor/slim/slim/Slim/App.php(215): Slim\MiddlewareDispatcher->handle(Object(Slim\Psr7\Request))
+#19 /Applications/XAMPP/xamppfiles/htdocs/WorkStation/Multive/vendor/slim/slim/Slim/App.php(199): Slim\App->handle(Object(Slim\Psr7\Request))
+#20 /Applications/XAMPP/xamppfiles/htdocs/WorkStation/Multive/index.php(127): Slim\App->run()
+#21 {main}
+[05-Apr-2021 07:38:44 Africa/Lagos] Slim Application Error
+Type: PDOException
+Code: 0
+Message: SQLSTATE[HY000] [1049] Unknown database 'db_multive'
+File: /Applications/XAMPP/xamppfiles/htdocs/WorkStation/Multive/vendor/catfan/medoo/src/Medoo.php
+Line: 323
+Trace: #0 /Applications/XAMPP/xamppfiles/htdocs/WorkStation/Multive/router/route.php(21): Medoo\Medoo->__construct(Array)
+#1 /Applications/XAMPP/xamppfiles/htdocs/WorkStation/Multive/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php(43): Closure->{closure}(Object(Slim\Psr7\Request), Object(Slim\Psr7\Response), Array)
+#2 /Applications/XAMPP/xamppfiles/htdocs/WorkStation/Multive/vendor/slim/slim/Slim/Routing/Route.php(384): Slim\Handlers\Strategies\RequestResponse->__invoke(Object(Closure), Object(Slim\Psr7\Request), Object(Slim\Psr7\Response), Array)
+#3 /Applications/XAMPP/xamppfiles/htdocs/WorkStation/Multive/vendor/slim/slim/Slim/MiddlewareDispatcher.php(81): Slim\Routing\Route->handle(Object(Slim\Psr7\Request))
+#4 /Applications/XAMPP/xamppfiles/htdocs/WorkStation/Multive/vendor/slim/slim/Slim/MiddlewareDispatcher.php(81): Slim\MiddlewareDispatcher->handle(Object(Slim\Psr7\Request))
+#5 /Applications/XAMPP/xamppfiles/htdocs/WorkStation/Multive/vendor/slim/slim/Slim/Routing/Route.php(341): Slim\MiddlewareDispatcher->handle(Object(Slim\Psr7\Request))
+#6 /Applications/XAMPP/xamppfiles/htdocs/WorkStation/Multive/vendor/slim/slim/Slim/Routing/RouteRunner.php(84): Slim\Routing\Route->run(Object(Slim\Psr7\Request))
+#7 /Applications/XAMPP/xamppfiles/htdocs/WorkStation/Multive/vendor/slim/slim/Slim/Middleware/BodyParsingMiddleware.php(68): Slim\Routing\RouteRunner->handle(Object(Slim\Psr7\Request))
+#8 /Applications/XAMPP/xamppfiles/htdocs/WorkStation/Multive/vendor/slim/slim/Slim/MiddlewareDispatcher.php(147): Slim\Middleware\BodyParsingMiddleware->process(Object(Slim\Psr7\Request), Object(Slim\Routing\RouteRunner))
+#9 /Applications/XAMPP/xamppfiles/htdocs/WorkStation/Multive/index.php(76): Psr\Http\Server\RequestHandlerInterface@anonymous->handle(Object(Slim\Psr7\Request))
+#10 /Applications/XAMPP/xamppfiles/htdocs/WorkStation/Multive/vendor/slim/slim/Slim/MiddlewareDispatcher.php(313): Closure->{closure}(Object(Slim\Psr7\Request), Object(Psr\Http\Server\RequestHandlerInterface@anonymous))
+#11 /Applications/XAMPP/xamppfiles/htdocs/WorkStation/Multive/vendor/slim/slim/Slim/Middleware/RoutingMiddleware.php(59): Psr\Http\Server\RequestHandlerInterface@anonymous->handle(Object(Slim\Psr7\Request))
+#12 /Applications/XAMPP/xamppfiles/htdocs/WorkStation/Multive/vendor/slim/slim/Slim/MiddlewareDispatcher.php(147): Slim\Middleware\RoutingMiddleware->process(Object(Slim\Psr7\Request), Object(Psr\Http\Server\RequestHandlerInterface@anonymous))
+#13 /Applications/XAMPP/xamppfiles/htdocs/WorkStation/Multive/vendor/slim/slim/Slim/Middleware/ErrorMiddleware.php(107): Psr\Http\Server\RequestHandlerInterface@anonymous->handle(Object(Slim\Psr7\Request))
+#14 /Applications/XAMPP/xamppfiles/htdocs/WorkStation/Multive/vendor/slim/slim/Slim/MiddlewareDispatcher.php(147): Slim\Middleware\ErrorMiddleware->process(Object(Slim\Psr7\Request), Object(Psr\Http\Server\RequestHandlerInterface@anonymous))
+#15 /Applications/XAMPP/xamppfiles/htdocs/WorkStation/Multive/index.php(111): Psr\Http\Server\RequestHandlerInterface@anonymous->handle(Object(Slim\Psr7\Request))
+#16 /Applications/XAMPP/xamppfiles/htdocs/WorkStation/Multive/vendor/slim/slim/Slim/MiddlewareDispatcher.php(313): Closure->{closure}(Object(Slim\Psr7\Request), Object(Psr\Http\Server\RequestHandlerInterface@anonymous))
+#17 /Applications/XAMPP/xamppfiles/htdocs/WorkStation/Multive/vendor/slim/slim/Slim/MiddlewareDispatcher.php(81): Psr\Http\Server\RequestHandlerInterface@anonymous->handle(Object(Slim\Psr7\Request))
+#18 /Applications/XAMPP/xamppfiles/htdocs/WorkStation/Multive/vendor/slim/slim/Slim/App.php(215): Slim\MiddlewareDispatcher->handle(Object(Slim\Psr7\Request))
+#19 /Applications/XAMPP/xamppfiles/htdocs/WorkStation/Multive/vendor/slim/slim/Slim/App.php(199): Slim\App->handle(Object(Slim\Psr7\Request))
+#20 /Applications/XAMPP/xamppfiles/htdocs/WorkStation/Multive/index.php(127): Slim\App->run()
+#21 {main}
+[05-Apr-2021 07:41:11 Africa/Lagos] PHP Warning:  foreach() argument must be of type array|object, null given in /Applications/XAMPP/xamppfiles/htdocs/WorkStation/Multive/vendor/catfan/medoo/src/Medoo.php on line 551
+[05-Apr-2021 07:41:11 Africa/Lagos] Slim Application Error
+Type: PDOException
+Code: 42000
+Message: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'FROM &quot;users&quot;' at line 1
+File: /Applications/XAMPP/xamppfiles/htdocs/WorkStation/Multive/vendor/catfan/medoo/src/Medoo.php
+Line: 375
+Trace: #0 /Applications/XAMPP/xamppfiles/htdocs/WorkStation/Multive/vendor/catfan/medoo/src/Medoo.php(375): PDOStatement->execute()
+#1 /Applications/XAMPP/xamppfiles/htdocs/WorkStation/Multive/vendor/catfan/medoo/src/Medoo.php(1365): Medoo\Medoo->exec('SELECT  FROM "u...', Array)
+#2 /Applications/XAMPP/xamppfiles/htdocs/WorkStation/Multive/router/route.php(23): Medoo\Medoo->select('users', NULL)
+#3 /Applications/XAMPP/xamppfiles/htdocs/WorkStation/Multive/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php(43): Closure->{closure}(Object(Slim\Psr7\Request), Object(Slim\Psr7\Response), Array)
+#4 /Applications/XAMPP/xamppfiles/htdocs/WorkStation/Multive/vendor/slim/slim/Slim/Routing/Route.php(384): Slim\Handlers\Strategies\RequestResponse->__invoke(Object(Closure), Object(Slim\Psr7\Request), Object(Slim\Psr7\Response), Array)
+#5 /Applications/XAMPP/xamppfiles/htdocs/WorkStation/Multive/vendor/slim/slim/Slim/MiddlewareDispatcher.php(81): Slim\Routing\Route->handle(Object(Slim\Psr7\Request))
+#6 /Applications/XAMPP/xamppfiles/htdocs/WorkStation/Multive/vendor/slim/slim/Slim/MiddlewareDispatcher.php(81): Slim\MiddlewareDispatcher->handle(Object(Slim\Psr7\Request))
+#7 /Applications/XAMPP/xamppfiles/htdocs/WorkStation/Multive/vendor/slim/slim/Slim/Routing/Route.php(341): Slim\MiddlewareDispatcher->handle(Object(Slim\Psr7\Request))
+#8 /Applications/XAMPP/xamppfiles/htdocs/WorkStation/Multive/vendor/slim/slim/Slim/Routing/RouteRunner.php(84): Slim\Routing\Route->run(Object(Slim\Psr7\Request))
+#9 /Applications/XAMPP/xamppfiles/htdocs/WorkStation/Multive/vendor/slim/slim/Slim/Middleware/BodyParsingMiddleware.php(68): Slim\Routing\RouteRunner->handle(Object(Slim\Psr7\Request))
+#10 /Applications/XAMPP/xamppfiles/htdocs/WorkStation/Multive/vendor/slim/slim/Slim/MiddlewareDispatcher.php(147): Slim\Middleware\BodyParsingMiddleware->process(Object(Slim\Psr7\Request), Object(Slim\Routing\RouteRunner))
+#11 /Applications/XAMPP/xamppfiles/htdocs/WorkStation/Multive/index.php(76): Psr\Http\Server\RequestHandlerInterface@anonymous->handle(Object(Slim\Psr7\Request))
+#12 /Applications/XAMPP/xamppfiles/htdocs/WorkStation/Multive/vendor/slim/slim/Slim/MiddlewareDispatcher.php(313): Closure->{closure}(Object(Slim\Psr7\Request), Object(Psr\Http\Server\RequestHandlerInterface@anonymous))
+#13 /Applications/XAMPP/xamppfiles/htdocs/WorkStation/Multive/vendor/slim/slim/Slim/Middleware/RoutingMiddleware.php(59): Psr\Http\Server\RequestHandlerInterface@anonymous->handle(Object(Slim\Psr7\Request))
+#14 /Applications/XAMPP/xamppfiles/htdocs/WorkStation/Multive/vendor/slim/slim/Slim/MiddlewareDispatcher.php(147): Slim\Middleware\RoutingMiddleware->process(Object(Slim\Psr7\Request), Object(Psr\Http\Server\RequestHandlerInterface@anonymous))
+#15 /Applications/XAMPP/xamppfiles/htdocs/WorkStation/Multive/vendor/slim/slim/Slim/Middleware/ErrorMiddleware.php(107): Psr\Http\Server\RequestHandlerInterface@anonymous->handle(Object(Slim\Psr7\Request))
+#16 /Applications/XAMPP/xamppfiles/htdocs/WorkStation/Multive/vendor/slim/slim/Slim/MiddlewareDispatcher.php(147): Slim\Middleware\ErrorMiddleware->process(Object(Slim\Psr7\Request), Object(Psr\Http\Server\RequestHandlerInterface@anonymous))
+#17 /Applications/XAMPP/xamppfiles/htdocs/WorkStation/Multive/index.php(111): Psr\Http\Server\RequestHandlerInterface@anonymous->handle(Object(Slim\Psr7\Request))
+#18 /Applications/XAMPP/xamppfiles/htdocs/WorkStation/Multive/vendor/slim/slim/Slim/MiddlewareDispatcher.php(313): Closure->{closure}(Object(Slim\Psr7\Request), Object(Psr\Http\Server\RequestHandlerInterface@anonymous))
+#19 /Applications/XAMPP/xamppfiles/htdocs/WorkStation/Multive/vendor/slim/slim/Slim/MiddlewareDispatcher.php(81): Psr\Http\Server\RequestHandlerInterface@anonymous->handle(Object(Slim\Psr7\Request))
+#20 /Applications/XAMPP/xamppfiles/htdocs/WorkStation/Multive/vendor/slim/slim/Slim/App.php(215): Slim\MiddlewareDispatcher->handle(Object(Slim\Psr7\Request))
+#21 /Applications/XAMPP/xamppfiles/htdocs/WorkStation/Multive/vendor/slim/slim/Slim/App.php(199): Slim\App->handle(Object(Slim\Psr7\Request))
+#22 /Applications/XAMPP/xamppfiles/htdocs/WorkStation/Multive/index.php(127): Slim\App->run()
+#23 {main}
+[05-Apr-2021 07:41:54 Africa/Lagos] PHP Warning:  foreach() argument must be of type array|object, null given in /Applications/XAMPP/xamppfiles/htdocs/WorkStation/Multive/vendor/catfan/medoo/src/Medoo.php on line 551
+[05-Apr-2021 07:41:54 Africa/Lagos] Slim Application Error
+Type: PDOException
+Code: 42000
+Message: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'FROM &quot;users&quot;' at line 1
+File: /Applications/XAMPP/xamppfiles/htdocs/WorkStation/Multive/vendor/catfan/medoo/src/Medoo.php
+Line: 375
+Trace: #0 /Applications/XAMPP/xamppfiles/htdocs/WorkStation/Multive/vendor/catfan/medoo/src/Medoo.php(375): PDOStatement->execute()
+#1 /Applications/XAMPP/xamppfiles/htdocs/WorkStation/Multive/vendor/catfan/medoo/src/Medoo.php(1365): Medoo\Medoo->exec('SELECT  FROM "u...', Array)
+#2 /Applications/XAMPP/xamppfiles/htdocs/WorkStation/Multive/router/route.php(23): Medoo\Medoo->select('users', NULL, NULL, Array)
+#3 /Applications/XAMPP/xamppfiles/htdocs/WorkStation/Multive/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php(43): Closure->{closure}(Object(Slim\Psr7\Request), Object(Slim\Psr7\Response), Array)
+#4 /Applications/XAMPP/xamppfiles/htdocs/WorkStation/Multive/vendor/slim/slim/Slim/Routing/Route.php(384): Slim\Handlers\Strategies\RequestResponse->__invoke(Object(Closure), Object(Slim\Psr7\Request), Object(Slim\Psr7\Response), Array)
+#5 /Applications/XAMPP/xamppfiles/htdocs/WorkStation/Multive/vendor/slim/slim/Slim/MiddlewareDispatcher.php(81): Slim\Routing\Route->handle(Object(Slim\Psr7\Request))
+#6 /Applications/XAMPP/xamppfiles/htdocs/WorkStation/Multive/vendor/slim/slim/Slim/MiddlewareDispatcher.php(81): Slim\MiddlewareDispatcher->handle(Object(Slim\Psr7\Request))
+#7 /Applications/XAMPP/xamppfiles/htdocs/WorkStation/Multive/vendor/slim/slim/Slim/Routing/Route.php(341): Slim\MiddlewareDispatcher->handle(Object(Slim\Psr7\Request))
+#8 /Applications/XAMPP/xamppfiles/htdocs/WorkStation/Multive/vendor/slim/slim/Slim/Routing/RouteRunner.php(84): Slim\Routing\Route->run(Object(Slim\Psr7\Request))
+#9 /Applications/XAMPP/xamppfiles/htdocs/WorkStation/Multive/vendor/slim/slim/Slim/Middleware/BodyParsingMiddleware.php(68): Slim\Routing\RouteRunner->handle(Object(Slim\Psr7\Request))
+#10 /Applications/XAMPP/xamppfiles/htdocs/WorkStation/Multive/vendor/slim/slim/Slim/MiddlewareDispatcher.php(147): Slim\Middleware\BodyParsingMiddleware->process(Object(Slim\Psr7\Request), Object(Slim\Routing\RouteRunner))
+#11 /Applications/XAMPP/xamppfiles/htdocs/WorkStation/Multive/index.php(76): Psr\Http\Server\RequestHandlerInterface@anonymous->handle(Object(Slim\Psr7\Request))
+#12 /Applications/XAMPP/xamppfiles/htdocs/WorkStation/Multive/vendor/slim/slim/Slim/MiddlewareDispatcher.php(313): Closure->{closure}(Object(Slim\Psr7\Request), Object(Psr\Http\Server\RequestHandlerInterface@anonymous))
+#13 /Applications/XAMPP/xamppfiles/htdocs/WorkStation/Multive/vendor/slim/slim/Slim/Middleware/RoutingMiddleware.php(59): Psr\Http\Server\RequestHandlerInterface@anonymous->handle(Object(Slim\Psr7\Request))
+#14 /Applications/XAMPP/xamppfiles/htdocs/WorkStation/Multive/vendor/slim/slim/Slim/MiddlewareDispatcher.php(147): Slim\Middleware\RoutingMiddleware->process(Object(Slim\Psr7\Request), Object(Psr\Http\Server\RequestHandlerInterface@anonymous))
+#15 /Applications/XAMPP/xamppfiles/htdocs/WorkStation/Multive/vendor/slim/slim/Slim/Middleware/ErrorMiddleware.php(107): Psr\Http\Server\RequestHandlerInterface@anonymous->handle(Object(Slim\Psr7\Request))
+#16 /Applications/XAMPP/xamppfiles/htdocs/WorkStation/Multive/vendor/slim/slim/Slim/MiddlewareDispatcher.php(147): Slim\Middleware\ErrorMiddleware->process(Object(Slim\Psr7\Request), Object(Psr\Http\Server\RequestHandlerInterface@anonymous))
+#17 /Applications/XAMPP/xamppfiles/htdocs/WorkStation/Multive/index.php(111): Psr\Http\Server\RequestHandlerInterface@anonymous->handle(Object(Slim\Psr7\Request))
+#18 /Applications/XAMPP/xamppfiles/htdocs/WorkStation/Multive/vendor/slim/slim/Slim/MiddlewareDispatcher.php(313): Closure->{closure}(Object(Slim\Psr7\Request), Object(Psr\Http\Server\RequestHandlerInterface@anonymous))
+#19 /Applications/XAMPP/xamppfiles/htdocs/WorkStation/Multive/vendor/slim/slim/Slim/MiddlewareDispatcher.php(81): Psr\Http\Server\RequestHandlerInterface@anonymous->handle(Object(Slim\Psr7\Request))
+#20 /Applications/XAMPP/xamppfiles/htdocs/WorkStation/Multive/vendor/slim/slim/Slim/App.php(215): Slim\MiddlewareDispatcher->handle(Object(Slim\Psr7\Request))
+#21 /Applications/XAMPP/xamppfiles/htdocs/WorkStation/Multive/vendor/slim/slim/Slim/App.php(199): Slim\App->handle(Object(Slim\Psr7\Request))
+#22 /Applications/XAMPP/xamppfiles/htdocs/WorkStation/Multive/index.php(127): Slim\App->run()
+#23 {main}
+[05-Apr-2021 07:43:25 Africa/Lagos] PHP Warning:  foreach() argument must be of type array|object, null given in /Applications/XAMPP/xamppfiles/htdocs/WorkStation/Multive/vendor/catfan/medoo/src/Medoo.php on line 551
+[05-Apr-2021 07:43:25 Africa/Lagos] Slim Application Error
+Type: PDOException
+Code: 42000
+Message: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'FROM &quot;users&quot;' at line 1
+File: /Applications/XAMPP/xamppfiles/htdocs/WorkStation/Multive/vendor/catfan/medoo/src/Medoo.php
+Line: 375
+Trace: #0 /Applications/XAMPP/xamppfiles/htdocs/WorkStation/Multive/vendor/catfan/medoo/src/Medoo.php(375): PDOStatement->execute()
+#1 /Applications/XAMPP/xamppfiles/htdocs/WorkStation/Multive/vendor/catfan/medoo/src/Medoo.php(1365): Medoo\Medoo->exec('SELECT  FROM "u...', Array)
+#2 /Applications/XAMPP/xamppfiles/htdocs/WorkStation/Multive/router/route.php(23): Medoo\Medoo->select('users', NULL, NULL, Array)
+#3 /Applications/XAMPP/xamppfiles/htdocs/WorkStation/Multive/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php(43): Closure->{closure}(Object(Slim\Psr7\Request), Object(Slim\Psr7\Response), Array)
+#4 /Applications/XAMPP/xamppfiles/htdocs/WorkStation/Multive/vendor/slim/slim/Slim/Routing/Route.php(384): Slim\Handlers\Strategies\RequestResponse->__invoke(Object(Closure), Object(Slim\Psr7\Request), Object(Slim\Psr7\Response), Array)
+#5 /Applications/XAMPP/xamppfiles/htdocs/WorkStation/Multive/vendor/slim/slim/Slim/MiddlewareDispatcher.php(81): Slim\Routing\Route->handle(Object(Slim\Psr7\Request))
+#6 /Applications/XAMPP/xamppfiles/htdocs/WorkStation/Multive/vendor/slim/slim/Slim/MiddlewareDispatcher.php(81): Slim\MiddlewareDispatcher->handle(Object(Slim\Psr7\Request))
+#7 /Applications/XAMPP/xamppfiles/htdocs/WorkStation/Multive/vendor/slim/slim/Slim/Routing/Route.php(341): Slim\MiddlewareDispatcher->handle(Object(Slim\Psr7\Request))
+#8 /Applications/XAMPP/xamppfiles/htdocs/WorkStation/Multive/vendor/slim/slim/Slim/Routing/RouteRunner.php(84): Slim\Routing\Route->run(Object(Slim\Psr7\Request))
+#9 /Applications/XAMPP/xamppfiles/htdocs/WorkStation/Multive/vendor/slim/slim/Slim/Middleware/BodyParsingMiddleware.php(68): Slim\Routing\RouteRunner->handle(Object(Slim\Psr7\Request))
+#10 /Applications/XAMPP/xamppfiles/htdocs/WorkStation/Multive/vendor/slim/slim/Slim/MiddlewareDispatcher.php(147): Slim\Middleware\BodyParsingMiddleware->process(Object(Slim\Psr7\Request), Object(Slim\Routing\RouteRunner))
+#11 /Applications/XAMPP/xamppfiles/htdocs/WorkStation/Multive/index.php(76): Psr\Http\Server\RequestHandlerInterface@anonymous->handle(Object(Slim\Psr7\Request))
+#12 /Applications/XAMPP/xamppfiles/htdocs/WorkStation/Multive/vendor/slim/slim/Slim/MiddlewareDispatcher.php(313): Closure->{closure}(Object(Slim\Psr7\Request), Object(Psr\Http\Server\RequestHandlerInterface@anonymous))
+#13 /Applications/XAMPP/xamppfiles/htdocs/WorkStation/Multive/vendor/slim/slim/Slim/Middleware/RoutingMiddleware.php(59): Psr\Http\Server\RequestHandlerInterface@anonymous->handle(Object(Slim\Psr7\Request))
+#14 /Applications/XAMPP/xamppfiles/htdocs/WorkStation/Multive/vendor/slim/slim/Slim/MiddlewareDispatcher.php(147): Slim\Middleware\RoutingMiddleware->process(Object(Slim\Psr7\Request), Object(Psr\Http\Server\RequestHandlerInterface@anonymous))
+#15 /Applications/XAMPP/xamppfiles/htdocs/WorkStation/Multive/vendor/slim/slim/Slim/Middleware/ErrorMiddleware.php(107): Psr\Http\Server\RequestHandlerInterface@anonymous->handle(Object(Slim\Psr7\Request))
+#16 /Applications/XAMPP/xamppfiles/htdocs/WorkStation/Multive/vendor/slim/slim/Slim/MiddlewareDispatcher.php(147): Slim\Middleware\ErrorMiddleware->process(Object(Slim\Psr7\Request), Object(Psr\Http\Server\RequestHandlerInterface@anonymous))
+#17 /Applications/XAMPP/xamppfiles/htdocs/WorkStation/Multive/index.php(111): Psr\Http\Server\RequestHandlerInterface@anonymous->handle(Object(Slim\Psr7\Request))
+#18 /Applications/XAMPP/xamppfiles/htdocs/WorkStation/Multive/vendor/slim/slim/Slim/MiddlewareDispatcher.php(313): Closure->{closure}(Object(Slim\Psr7\Request), Object(Psr\Http\Server\RequestHandlerInterface@anonymous))
+#19 /Applications/XAMPP/xamppfiles/htdocs/WorkStation/Multive/vendor/slim/slim/Slim/MiddlewareDispatcher.php(81): Psr\Http\Server\RequestHandlerInterface@anonymous->handle(Object(Slim\Psr7\Request))
+#20 /Applications/XAMPP/xamppfiles/htdocs/WorkStation/Multive/vendor/slim/slim/Slim/App.php(215): Slim\MiddlewareDispatcher->handle(Object(Slim\Psr7\Request))
+#21 /Applications/XAMPP/xamppfiles/htdocs/WorkStation/Multive/vendor/slim/slim/Slim/App.php(199): Slim\App->handle(Object(Slim\Psr7\Request))
+#22 /Applications/XAMPP/xamppfiles/htdocs/WorkStation/Multive/index.php(127): Slim\App->run()
+#23 {main}
+[05-Apr-2021 07:44:04 Africa/Lagos] Slim Application Error
+Type: PDOException
+Code: 42000
+Message: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'FROM &quot;users&quot;' at line 1
+File: /Applications/XAMPP/xamppfiles/htdocs/WorkStation/Multive/vendor/catfan/medoo/src/Medoo.php
+Line: 375
+Trace: #0 /Applications/XAMPP/xamppfiles/htdocs/WorkStation/Multive/vendor/catfan/medoo/src/Medoo.php(375): PDOStatement->execute()
+#1 /Applications/XAMPP/xamppfiles/htdocs/WorkStation/Multive/vendor/catfan/medoo/src/Medoo.php(1365): Medoo\Medoo->exec('SELECT  FROM "u...', Array)
+#2 /Applications/XAMPP/xamppfiles/htdocs/WorkStation/Multive/router/route.php(23): Medoo\Medoo->select('users', Array, Array)
+#3 /Applications/XAMPP/xamppfiles/htdocs/WorkStation/Multive/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php(43): Closure->{closure}(Object(Slim\Psr7\Request), Object(Slim\Psr7\Response), Array)
+#4 /Applications/XAMPP/xamppfiles/htdocs/WorkStation/Multive/vendor/slim/slim/Slim/Routing/Route.php(384): Slim\Handlers\Strategies\RequestResponse->__invoke(Object(Closure), Object(Slim\Psr7\Request), Object(Slim\Psr7\Response), Array)
+#5 /Applications/XAMPP/xamppfiles/htdocs/WorkStation/Multive/vendor/slim/slim/Slim/MiddlewareDispatcher.php(81): Slim\Routing\Route->handle(Object(Slim\Psr7\Request))
+#6 /Applications/XAMPP/xamppfiles/htdocs/WorkStation/Multive/vendor/slim/slim/Slim/MiddlewareDispatcher.php(81): Slim\MiddlewareDispatcher->handle(Object(Slim\Psr7\Request))
+#7 /Applications/XAMPP/xamppfiles/htdocs/WorkStation/Multive/vendor/slim/slim/Slim/Routing/Route.php(341): Slim\MiddlewareDispatcher->handle(Object(Slim\Psr7\Request))
+#8 /Applications/XAMPP/xamppfiles/htdocs/WorkStation/Multive/vendor/slim/slim/Slim/Routing/RouteRunner.php(84): Slim\Routing\Route->run(Object(Slim\Psr7\Request))
+#9 /Applications/XAMPP/xamppfiles/htdocs/WorkStation/Multive/vendor/slim/slim/Slim/Middleware/BodyParsingMiddleware.php(68): Slim\Routing\RouteRunner->handle(Object(Slim\Psr7\Request))
+#10 /Applications/XAMPP/xamppfiles/htdocs/WorkStation/Multive/vendor/slim/slim/Slim/MiddlewareDispatcher.php(147): Slim\Middleware\BodyParsingMiddleware->process(Object(Slim\Psr7\Request), Object(Slim\Routing\RouteRunner))
+#11 /Applications/XAMPP/xamppfiles/htdocs/WorkStation/Multive/index.php(76): Psr\Http\Server\RequestHandlerInterface@anonymous->handle(Object(Slim\Psr7\Request))
+#12 /Applications/XAMPP/xamppfiles/htdocs/WorkStation/Multive/vendor/slim/slim/Slim/MiddlewareDispatcher.php(313): Closure->{closure}(Object(Slim\Psr7\Request), Object(Psr\Http\Server\RequestHandlerInterface@anonymous))
+#13 /Applications/XAMPP/xamppfiles/htdocs/WorkStation/Multive/vendor/slim/slim/Slim/Middleware/RoutingMiddleware.php(59): Psr\Http\Server\RequestHandlerInterface@anonymous->handle(Object(Slim\Psr7\Request))
+#14 /Applications/XAMPP/xamppfiles/htdocs/WorkStation/Multive/vendor/slim/slim/Slim/MiddlewareDispatcher.php(147): Slim\Middleware\RoutingMiddleware->process(Object(Slim\Psr7\Request), Object(Psr\Http\Server\RequestHandlerInterface@anonymous))
+#15 /Applications/XAMPP/xamppfiles/htdocs/WorkStation/Multive/vendor/slim/slim/Slim/Middleware/ErrorMiddleware.php(107): Psr\Http\Server\RequestHandlerInterface@anonymous->handle(Object(Slim\Psr7\Request))
+#16 /Applications/XAMPP/xamppfiles/htdocs/WorkStation/Multive/vendor/slim/slim/Slim/MiddlewareDispatcher.php(147): Slim\Middleware\ErrorMiddleware->process(Object(Slim\Psr7\Request), Object(Psr\Http\Server\RequestHandlerInterface@anonymous))
+#17 /Applications/XAMPP/xamppfiles/htdocs/WorkStation/Multive/index.php(111): Psr\Http\Server\RequestHandlerInterface@anonymous->handle(Object(Slim\Psr7\Request))
+#18 /Applications/XAMPP/xamppfiles/htdocs/WorkStation/Multive/vendor/slim/slim/Slim/MiddlewareDispatcher.php(313): Closure->{closure}(Object(Slim\Psr7\Request), Object(Psr\Http\Server\RequestHandlerInterface@anonymous))
+#19 /Applications/XAMPP/xamppfiles/htdocs/WorkStation/Multive/vendor/slim/slim/Slim/MiddlewareDispatcher.php(81): Psr\Http\Server\RequestHandlerInterface@anonymous->handle(Object(Slim\Psr7\Request))
+#20 /Applications/XAMPP/xamppfiles/htdocs/WorkStation/Multive/vendor/slim/slim/Slim/App.php(215): Slim\MiddlewareDispatcher->handle(Object(Slim\Psr7\Request))
+#21 /Applications/XAMPP/xamppfiles/htdocs/WorkStation/Multive/vendor/slim/slim/Slim/App.php(199): Slim\App->handle(Object(Slim\Psr7\Request))
+#22 /Applications/XAMPP/xamppfiles/htdocs/WorkStation/Multive/index.php(127): Slim\App->run()
+#23 {main}
+[05-Apr-2021 07:44:44 Africa/Lagos] Slim Application Error
+Type: PDOException
+Code: 42S22
+Message: SQLSTATE[42S22]: Column not found: 1054 Unknown column '0' in 'where clause'
+File: /Applications/XAMPP/xamppfiles/htdocs/WorkStation/Multive/vendor/catfan/medoo/src/Medoo.php
+Line: 375
+Trace: #0 /Applications/XAMPP/xamppfiles/htdocs/WorkStation/Multive/vendor/catfan/medoo/src/Medoo.php(375): PDOStatement->execute()
+#1 /Applications/XAMPP/xamppfiles/htdocs/WorkStation/Multive/vendor/catfan/medoo/src/Medoo.php(1365): Medoo\Medoo->exec('SELECT * FROM "...', Array)
+#2 /Applications/XAMPP/xamppfiles/htdocs/WorkStation/Multive/router/route.php(23): Medoo\Medoo->select('users', '*', '*', Array)
+#3 /Applications/XAMPP/xamppfiles/htdocs/WorkStation/Multive/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php(43): Closure->{closure}(Object(Slim\Psr7\Request), Object(Slim\Psr7\Response), Array)
+#4 /Applications/XAMPP/xamppfiles/htdocs/WorkStation/Multive/vendor/slim/slim/Slim/Routing/Route.php(384): Slim\Handlers\Strategies\RequestResponse->__invoke(Object(Closure), Object(Slim\Psr7\Request), Object(Slim\Psr7\Response), Array)
+#5 /Applications/XAMPP/xamppfiles/htdocs/WorkStation/Multive/vendor/slim/slim/Slim/MiddlewareDispatcher.php(81): Slim\Routing\Route->handle(Object(Slim\Psr7\Request))
+#6 /Applications/XAMPP/xamppfiles/htdocs/WorkStation/Multive/vendor/slim/slim/Slim/MiddlewareDispatcher.php(81): Slim\MiddlewareDispatcher->handle(Object(Slim\Psr7\Request))
+#7 /Applications/XAMPP/xamppfiles/htdocs/WorkStation/Multive/vendor/slim/slim/Slim/Routing/Route.php(341): Slim\MiddlewareDispatcher->handle(Object(Slim\Psr7\Request))
+#8 /Applications/XAMPP/xamppfiles/htdocs/WorkStation/Multive/vendor/slim/slim/Slim/Routing/RouteRunner.php(84): Slim\Routing\Route->run(Object(Slim\Psr7\Request))
+#9 /Applications/XAMPP/xamppfiles/htdocs/WorkStation/Multive/vendor/slim/slim/Slim/Middleware/BodyParsingMiddleware.php(68): Slim\Routing\RouteRunner->handle(Object(Slim\Psr7\Request))
+#10 /Applications/XAMPP/xamppfiles/htdocs/WorkStation/Multive/vendor/slim/slim/Slim/MiddlewareDispatcher.php(147): Slim\Middleware\BodyParsingMiddleware->process(Object(Slim\Psr7\Request), Object(Slim\Routing\RouteRunner))
+#11 /Applications/XAMPP/xamppfiles/htdocs/WorkStation/Multive/index.php(76): Psr\Http\Server\RequestHandlerInterface@anonymous->handle(Object(Slim\Psr7\Request))
+#12 /Applications/XAMPP/xamppfiles/htdocs/WorkStation/Multive/vendor/slim/slim/Slim/MiddlewareDispatcher.php(313): Closure->{closure}(Object(Slim\Psr7\Request), Object(Psr\Http\Server\RequestHandlerInterface@anonymous))
+#13 /Applications/XAMPP/xamppfiles/htdocs/WorkStation/Multive/vendor/slim/slim/Slim/Middleware/RoutingMiddleware.php(59): Psr\Http\Server\RequestHandlerInterface@anonymous->handle(Object(Slim\Psr7\Request))
+#14 /Applications/XAMPP/xamppfiles/htdocs/WorkStation/Multive/vendor/slim/slim/Slim/MiddlewareDispatcher.php(147): Slim\Middleware\RoutingMiddleware->process(Object(Slim\Psr7\Request), Object(Psr\Http\Server\RequestHandlerInterface@anonymous))
+#15 /Applications/XAMPP/xamppfiles/htdocs/WorkStation/Multive/vendor/slim/slim/Slim/Middleware/ErrorMiddleware.php(107): Psr\Http\Server\RequestHandlerInterface@anonymous->handle(Object(Slim\Psr7\Request))
+#16 /Applications/XAMPP/xamppfiles/htdocs/WorkStation/Multive/vendor/slim/slim/Slim/MiddlewareDispatcher.php(147): Slim\Middleware\ErrorMiddleware->process(Object(Slim\Psr7\Request), Object(Psr\Http\Server\RequestHandlerInterface@anonymous))
+#17 /Applications/XAMPP/xamppfiles/htdocs/WorkStation/Multive/index.php(111): Psr\Http\Server\RequestHandlerInterface@anonymous->handle(Object(Slim\Psr7\Request))
+#18 /Applications/XAMPP/xamppfiles/htdocs/WorkStation/Multive/vendor/slim/slim/Slim/MiddlewareDispatcher.php(313): Closure->{closure}(Object(Slim\Psr7\Request), Object(Psr\Http\Server\RequestHandlerInterface@anonymous))
+#19 /Applications/XAMPP/xamppfiles/htdocs/WorkStation/Multive/vendor/slim/slim/Slim/MiddlewareDispatcher.php(81): Psr\Http\Server\RequestHandlerInterface@anonymous->handle(Object(Slim\Psr7\Request))
+#20 /Applications/XAMPP/xamppfiles/htdocs/WorkStation/Multive/vendor/slim/slim/Slim/App.php(215): Slim\MiddlewareDispatcher->handle(Object(Slim\Psr7\Request))
+#21 /Applications/XAMPP/xamppfiles/htdocs/WorkStation/Multive/vendor/slim/slim/Slim/App.php(199): Slim\App->handle(Object(Slim\Psr7\Request))
+#22 /Applications/XAMPP/xamppfiles/htdocs/WorkStation/Multive/index.php(127): Slim\App->run()
+#23 {main}
+[05-Apr-2021 07:46:45 Africa/Lagos] Slim Application Error
+Type: PDOException
+Code: 42000
+Message: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'FROM &quot;users&quot;' at line 1
+File: /Applications/XAMPP/xamppfiles/htdocs/WorkStation/Multive/vendor/catfan/medoo/src/Medoo.php
+Line: 375
+Trace: #0 /Applications/XAMPP/xamppfiles/htdocs/WorkStation/Multive/vendor/catfan/medoo/src/Medoo.php(375): PDOStatement->execute()
+#1 /Applications/XAMPP/xamppfiles/htdocs/WorkStation/Multive/vendor/catfan/medoo/src/Medoo.php(1365): Medoo\Medoo->exec('SELECT  FROM "u...', Array)
+#2 /Applications/XAMPP/xamppfiles/htdocs/WorkStation/Multive/router/route.php(23): Medoo\Medoo->select('users', Array, Array)
+#3 /Applications/XAMPP/xamppfiles/htdocs/WorkStation/Multive/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php(43): Closure->{closure}(Object(Slim\Psr7\Request), Object(Slim\Psr7\Response), Array)
+#4 /Applications/XAMPP/xamppfiles/htdocs/WorkStation/Multive/vendor/slim/slim/Slim/Routing/Route.php(384): Slim\Handlers\Strategies\RequestResponse->__invoke(Object(Closure), Object(Slim\Psr7\Request), Object(Slim\Psr7\Response), Array)
+#5 /Applications/XAMPP/xamppfiles/htdocs/WorkStation/Multive/vendor/slim/slim/Slim/MiddlewareDispatcher.php(81): Slim\Routing\Route->handle(Object(Slim\Psr7\Request))
+#6 /Applications/XAMPP/xamppfiles/htdocs/WorkStation/Multive/vendor/slim/slim/Slim/MiddlewareDispatcher.php(81): Slim\MiddlewareDispatcher->handle(Object(Slim\Psr7\Request))
+#7 /Applications/XAMPP/xamppfiles/htdocs/WorkStation/Multive/vendor/slim/slim/Slim/Routing/Route.php(341): Slim\MiddlewareDispatcher->handle(Object(Slim\Psr7\Request))
+#8 /Applications/XAMPP/xamppfiles/htdocs/WorkStation/Multive/vendor/slim/slim/Slim/Routing/RouteRunner.php(84): Slim\Routing\Route->run(Object(Slim\Psr7\Request))
+#9 /Applications/XAMPP/xamppfiles/htdocs/WorkStation/Multive/vendor/slim/slim/Slim/Middleware/BodyParsingMiddleware.php(68): Slim\Routing\RouteRunner->handle(Object(Slim\Psr7\Request))
+#10 /Applications/XAMPP/xamppfiles/htdocs/WorkStation/Multive/vendor/slim/slim/Slim/MiddlewareDispatcher.php(147): Slim\Middleware\BodyParsingMiddleware->process(Object(Slim\Psr7\Request), Object(Slim\Routing\RouteRunner))
+#11 /Applications/XAMPP/xamppfiles/htdocs/WorkStation/Multive/index.php(76): Psr\Http\Server\RequestHandlerInterface@anonymous->handle(Object(Slim\Psr7\Request))
+#12 /Applications/XAMPP/xamppfiles/htdocs/WorkStation/Multive/vendor/slim/slim/Slim/MiddlewareDispatcher.php(313): Closure->{closure}(Object(Slim\Psr7\Request), Object(Psr\Http\Server\RequestHandlerInterface@anonymous))
+#13 /Applications/XAMPP/xamppfiles/htdocs/WorkStation/Multive/vendor/slim/slim/Slim/Middleware/RoutingMiddleware.php(59): Psr\Http\Server\RequestHandlerInterface@anonymous->handle(Object(Slim\Psr7\Request))
+#14 /Applications/XAMPP/xamppfiles/htdocs/WorkStation/Multive/vendor/slim/slim/Slim/MiddlewareDispatcher.php(147): Slim\Middleware\RoutingMiddleware->process(Object(Slim\Psr7\Request), Object(Psr\Http\Server\RequestHandlerInterface@anonymous))
+#15 /Applications/XAMPP/xamppfiles/htdocs/WorkStation/Multive/vendor/slim/slim/Slim/Middleware/ErrorMiddleware.php(107): Psr\Http\Server\RequestHandlerInterface@anonymous->handle(Object(Slim\Psr7\Request))
+#16 /Applications/XAMPP/xamppfiles/htdocs/WorkStation/Multive/vendor/slim/slim/Slim/MiddlewareDispatcher.php(147): Slim\Middleware\ErrorMiddleware->process(Object(Slim\Psr7\Request), Object(Psr\Http\Server\RequestHandlerInterface@anonymous))
+#17 /Applications/XAMPP/xamppfiles/htdocs/WorkStation/Multive/index.php(111): Psr\Http\Server\RequestHandlerInterface@anonymous->handle(Object(Slim\Psr7\Request))
+#18 /Applications/XAMPP/xamppfiles/htdocs/WorkStation/Multive/vendor/slim/slim/Slim/MiddlewareDispatcher.php(313): Closure->{closure}(Object(Slim\Psr7\Request), Object(Psr\Http\Server\RequestHandlerInterface@anonymous))
+#19 /Applications/XAMPP/xamppfiles/htdocs/WorkStation/Multive/vendor/slim/slim/Slim/MiddlewareDispatcher.php(81): Psr\Http\Server\RequestHandlerInterface@anonymous->handle(Object(Slim\Psr7\Request))
+#20 /Applications/XAMPP/xamppfiles/htdocs/WorkStation/Multive/vendor/slim/slim/Slim/App.php(215): Slim\MiddlewareDispatcher->handle(Object(Slim\Psr7\Request))
+#21 /Applications/XAMPP/xamppfiles/htdocs/WorkStation/Multive/vendor/slim/slim/Slim/App.php(199): Slim\App->handle(Object(Slim\Psr7\Request))
+#22 /Applications/XAMPP/xamppfiles/htdocs/WorkStation/Multive/index.php(127): Slim\App->run()
+#23 {main}
+[05-Apr-2021 07:47:01 Africa/Lagos] PHP Warning:  Undefined array key "column" in /Applications/XAMPP/xamppfiles/htdocs/WorkStation/Multive/vendor/catfan/medoo/src/Medoo.php on line 591
+[05-Apr-2021 07:47:01 Africa/Lagos] Slim Application Error
+Type: InvalidArgumentException
+Code: 0
+Message: Incorrect column name &quot;&quot;
+File: /Applications/XAMPP/xamppfiles/htdocs/WorkStation/Multive/vendor/catfan/medoo/src/Medoo.php
+Line: 526
+Trace: #0 /Applications/XAMPP/xamppfiles/htdocs/WorkStation/Multive/vendor/catfan/medoo/src/Medoo.php(591): Medoo\Medoo->columnQuote(NULL)
+#1 /Applications/XAMPP/xamppfiles/htdocs/WorkStation/Multive/vendor/catfan/medoo/src/Medoo.php(1072): Medoo\Medoo->columnPush(Array, Array, true, false)
+#2 /Applications/XAMPP/xamppfiles/htdocs/WorkStation/Multive/vendor/catfan/medoo/src/Medoo.php(1365): Medoo\Medoo->selectContext('"users"', Array, Array, Array, Array)
+#3 /Applications/XAMPP/xamppfiles/htdocs/WorkStation/Multive/router/route.php(23): Medoo\Medoo->select('users', Array, Array)
+#4 /Applications/XAMPP/xamppfiles/htdocs/WorkStation/Multive/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php(43): Closure->{closure}(Object(Slim\Psr7\Request), Object(Slim\Psr7\Response), Array)
+#5 /Applications/XAMPP/xamppfiles/htdocs/WorkStation/Multive/vendor/slim/slim/Slim/Routing/Route.php(384): Slim\Handlers\Strategies\RequestResponse->__invoke(Object(Closure), Object(Slim\Psr7\Request), Object(Slim\Psr7\Response), Array)
+#6 /Applications/XAMPP/xamppfiles/htdocs/WorkStation/Multive/vendor/slim/slim/Slim/MiddlewareDispatcher.php(81): Slim\Routing\Route->handle(Object(Slim\Psr7\Request))
+#7 /Applications/XAMPP/xamppfiles/htdocs/WorkStation/Multive/vendor/slim/slim/Slim/MiddlewareDispatcher.php(81): Slim\MiddlewareDispatcher->handle(Object(Slim\Psr7\Request))
+#8 /Applications/XAMPP/xamppfiles/htdocs/WorkStation/Multive/vendor/slim/slim/Slim/Routing/Route.php(341): Slim\MiddlewareDispatcher->handle(Object(Slim\Psr7\Request))
+#9 /Applications/XAMPP/xamppfiles/htdocs/WorkStation/Multive/vendor/slim/slim/Slim/Routing/RouteRunner.php(84): Slim\Routing\Route->run(Object(Slim\Psr7\Request))
+#10 /Applications/XAMPP/xamppfiles/htdocs/WorkStation/Multive/vendor/slim/slim/Slim/Middleware/BodyParsingMiddleware.php(68): Slim\Routing\RouteRunner->handle(Object(Slim\Psr7\Request))
+#11 /Applications/XAMPP/xamppfiles/htdocs/WorkStation/Multive/vendor/slim/slim/Slim/MiddlewareDispatcher.php(147): Slim\Middleware\BodyParsingMiddleware->process(Object(Slim\Psr7\Request), Object(Slim\Routing\RouteRunner))
+#12 /Applications/XAMPP/xamppfiles/htdocs/WorkStation/Multive/index.php(76): Psr\Http\Server\RequestHandlerInterface@anonymous->handle(Object(Slim\Psr7\Request))
+#13 /Applications/XAMPP/xamppfiles/htdocs/WorkStation/Multive/vendor/slim/slim/Slim/MiddlewareDispatcher.php(313): Closure->{closure}(Object(Slim\Psr7\Request), Object(Psr\Http\Server\RequestHandlerInterface@anonymous))
+#14 /Applications/XAMPP/xamppfiles/htdocs/WorkStation/Multive/vendor/slim/slim/Slim/Middleware/RoutingMiddleware.php(59): Psr\Http\Server\RequestHandlerInterface@anonymous->handle(Object(Slim\Psr7\Request))
+#15 /Applications/XAMPP/xamppfiles/htdocs/WorkStation/Multive/vendor/slim/slim/Slim/MiddlewareDispatcher.php(147): Slim\Middleware\RoutingMiddleware->process(Object(Slim\Psr7\Request), Object(Psr\Http\Server\RequestHandlerInterface@anonymous))
+#16 /Applications/XAMPP/xamppfiles/htdocs/WorkStation/Multive/vendor/slim/slim/Slim/Middleware/ErrorMiddleware.php(107): Psr\Http\Server\RequestHandlerInterface@anonymous->handle(Object(Slim\Psr7\Request))
+#17 /Applications/XAMPP/xamppfiles/htdocs/WorkStation/Multive/vendor/slim/slim/Slim/MiddlewareDispatcher.php(147): Slim\Middleware\ErrorMiddleware->process(Object(Slim\Psr7\Request), Object(Psr\Http\Server\RequestHandlerInterface@anonymous))
+#18 /Applications/XAMPP/xamppfiles/htdocs/WorkStation/Multive/index.php(111): Psr\Http\Server\RequestHandlerInterface@anonymous->handle(Object(Slim\Psr7\Request))
+#19 /Applications/XAMPP/xamppfiles/htdocs/WorkStation/Multive/vendor/slim/slim/Slim/MiddlewareDispatcher.php(313): Closure->{closure}(Object(Slim\Psr7\Request), Object(Psr\Http\Server\RequestHandlerInterface@anonymous))
+#20 /Applications/XAMPP/xamppfiles/htdocs/WorkStation/Multive/vendor/slim/slim/Slim/MiddlewareDispatcher.php(81): Psr\Http\Server\RequestHandlerInterface@anonymous->handle(Object(Slim\Psr7\Request))
+#21 /Applications/XAMPP/xamppfiles/htdocs/WorkStation/Multive/vendor/slim/slim/Slim/App.php(215): Slim\MiddlewareDispatcher->handle(Object(Slim\Psr7\Request))
+#22 /Applications/XAMPP/xamppfiles/htdocs/WorkStation/Multive/vendor/slim/slim/Slim/App.php(199): Slim\App->handle(Object(Slim\Psr7\Request))
+#23 /Applications/XAMPP/xamppfiles/htdocs/WorkStation/Multive/index.php(127): Slim\App->run()
+#24 {main}
