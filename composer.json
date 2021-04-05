@@ -37,16 +37,21 @@
     "rbdwllr/reallysimplejwt": "^3.1",
     "monolog/monolog": "^2.2",
     "slim/csrf": "^1.2",
-    "catfan/medoo": "^1.7"
+    "catfan/medoo": "^1.7",
+    "ext-readline": "*",
+    "symfony/console": "^5.2"
   },
   "autoload": {
-    "classmap": ["controllers/", "tests/"],
+    "classmap": ["controllers/", "tests/", "bin/Commands"],
     "files": [
       "./helpers/TokenGenerator.php",
       "./controllers/SQL.php",
       "./helpers/myFunctions.php",
       "./helpers/session.php"
-    ]
+    ],
+    "psr-4": {
+      "MultiveCLI\\": "bin/Commands"
+    }
   },
   "scripts": {
     "post-root-package-install": [
