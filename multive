@@ -1,0 +1,19 @@
+#!/usr/bin/env php
+<?php
+// application.php
+//https://symfony.com/doc/current/components/console.html
+
+require __DIR__.'/vendor/autoload.php';
+
+use MultiveCLI\HelloworldCommand;
+use MultiveCLI\ProductionCommand;
+use Symfony\Component\Console\Application;
+
+$application = new Application();
+
+// ... register commands
+$application->add(new HelloworldCommand());
+$application->add(new ProductionCommand());
+
+/** @noinspection PhpUnhandledExceptionInspection */
+$application->run();
