@@ -10,6 +10,8 @@ const postcss = require('gulp-postcss');
 const autoprefixer = require('autoprefixer');
 const cssnano = require('cssnano');
 const replace = require('gulp-replace');
+const imagemin = require("gulp-imagemin");
+const cache = require("gulp-cache");
 
 // file path variables
 const allCompiledJsFilename = '_9550808079.js';
@@ -17,6 +19,15 @@ const files = {
     scssPath: 'assets/app/scss/**/*.scss',
     jsPath: 'assets/app/js/**/*.js',
     distPath: 'dist',
+    imagePath: 'assets/images/**/*.+(png|jpg|gif|svg|jpeg)',
+}
+
+
+// Task to minify images
+function imagesTask() {
+    return src(files.imagePath)
+        .pipe(cache(imagemin()))
+        .pipe(dest('dist/images'));
 }
 
 function scssTask(){
@@ -53,7 +64,7 @@ function watchTask(){
     watch([files.scssPath, files.jsPath],
         {interval: 1000, usePolling: true}, //Makes docker work
         series(
-            parallel(scssTask, jsTask),
+            parallel(scssTask, jsTask, imagesTask),
             cacheBustTask
         )
     );
@@ -61,7 +72,7 @@ function watchTask(){
 
 // Default task
 exports.default = series(
-    parallel(scssTask, jsTask),
+    parallel(scssTask, jsTask, imagesTask),
     cacheBustTask,
     watchTask
 );
