@@ -46,7 +46,7 @@
     <div class="centered third">
         <div class="second">
             <div class="first">
-                <img src="<?php echo getBasePath(); ?>/assets/images/logo.png" alt="Multive">
+                <img src="<?php echo getBasePath(); ?>/dist/images/logo.png" alt="Multive">
             </div>
         </div>
     </div>
