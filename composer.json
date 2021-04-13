@@ -38,7 +38,8 @@
     "slim/csrf": "^1.2",
     "catfan/medoo": "^1.7",
     "ext-readline": "*",
-    "symfony/console": "^5.2"
+    "symfony/console": "^5.2",
+    "symfony/polyfill-uuid": "^1.22"
   },
   "autoload": {
     "classmap": ["controllers/", "tests/", "bin/Commands"],
@@ -49,7 +50,8 @@
       "./helpers/session.php"
     ],
     "psr-4": {
-      "MultiveCLI\\": "bin/Commands"
+      "MultiveCLI\\": "bin/Commands",
+      "MultiveLogger\\": "controllers/factory"
     }
   },
   "scripts": {

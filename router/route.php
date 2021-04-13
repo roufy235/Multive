@@ -3,6 +3,7 @@
 /** @noinspection StaticClosureCanBeUsedInspection */
 declare(strict_types=1);
 
+use MultiveLogger\models\UserModel;
 use ReallySimpleJWT\Token;
 use Slim\App;
 use Slim\Views\PhpRenderer;
@@ -10,6 +11,11 @@ use Slim\Views\PhpRenderer;
 return function (App $app) {
 
     $app->get('/', function ($request, $response, $args) {
+
+        $newUser = new UserModel();
+        $newUser->setName(234);
+        //$this->get('LoggerNewAccount')->registerUser($newUser);
+
         $renderer = new PhpRenderer(__DIR__ . '/../views/');
         return $renderer->render($response, "index.php", [
 

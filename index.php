@@ -1,10 +1,11 @@
 <?php
 session_start();
 date_default_timezone_set('Africa/Lagos');
+
+use MultiveLogger\LoggerFactory;
 use DI\ContainerBuilder;
-use Medoo\Medoo;
-use Monolog\Handler\StreamHandler;
 use Monolog\Logger;
+use MultiveLogger\LoggerNewAccount;
 use Psr\Http\Message\ServerRequestInterface;
 use Psr\Http\Server\RequestHandlerInterface;
 use Slim\Exception\HttpNotFoundException;
@@ -43,14 +44,26 @@ $containerBuilder = new ContainerBuilder();
 $container = $containerBuilder->build();
 $container->set('upload_directory', __DIR__ . '/uploads'. DIRECTORY_SEPARATOR);
 // e.g $path = $this->get('upload_directory');
-$container->set('logger', function() : Logger {
-    $name = $_ENV['PROJECT_NAME'];
-    $logger = new Logger($name);
-    $file_handler = new StreamHandler(__DIR__ . '/cache/'. $name .'.log', Logger::WARNING);
-    $logger->pushHandler($file_handler);
-    return $logger;
+
+const LOGGER_SETTINGS = [
+    'name' => 'app',
+    'path' => __DIR__ . DIRECTORY_SEPARATOR. 'logs',
+    'filename' => 'app.log',
+    'level' => Logger::DEBUG,
+    'file_permission' => 0775,
+];
+$container->set('MultiveErrorLoggerFactory', function() : LoggerFactory {
+    return new LoggerFactory(LOGGER_SETTINGS);
 });
-// e.g $this->get('logger')->error('Bar', ['hello', __FILE__, __LINE__]);
+$container->set('LoggerNewAccount', function() : LoggerNewAccount {
+    return new LoggerNewAccount(new LoggerFactory(LOGGER_SETTINGS));
+});
+/*
+ * USAGE
+ * $newUser = new \MultiveLogger\models\UserModel();
+ * $newUser->setName(234);
+ * $this->get('LoggerNewAccount')->registerUser($newUser);
+ */
 
 $container->set('databaseConnection', function() : array {
     return [
@@ -78,13 +91,13 @@ $app->add(function (ServerRequestInterface $request, RequestHandlerInterface $ha
     $response = $response->withHeader('Access-Control-Allow-Methods', implode(',', $methods));
     $response = $response->withHeader('Access-Control-Allow-Headers', $requestHeaders);
     // Optional: Allow Ajax CORS requests with Authorization header
-    $response = $response->withHeader('Access-Control-Allow-Credentials', 'true');
-    return $response;
+    return $response->withHeader('Access-Control-Allow-Credentials', 'true');
 });
 $app->addRoutingMiddleware();
 $app->setBasePath(getBasePath());
 if (in_array($_SERVER['REMOTE_ADDR'], REMOTE_ADDR)) {
-    $app->addErrorMiddleware(true, true, true);
+    $MultiveErrorLoggerFactory = $app->getContainer()->get('MultiveErrorLoggerFactory')->addFileHandler('error.log')->createLogger();
+    $app->addErrorMiddleware(true, true, true, $MultiveErrorLoggerFactory);
     error_reporting(E_ALL); // Error/Exception engine, always use E_ALL
 
     ini_set('ignore_repeated_errors', TRUE); // always use TRUE
