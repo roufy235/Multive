@@ -10,6 +10,9 @@ use Slim\Views\PhpRenderer;
 return function (App $app) {
 
     $app->get('/', function ($request, $response, $args) {
+
+
+
         $renderer = new PhpRenderer(__DIR__ . '/../views/');
         return $renderer->render($response, "index.php", [
 

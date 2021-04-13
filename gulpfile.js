@@ -19,7 +19,7 @@ const files = {
     scssPath: 'assets/app/scss/**/*.scss',
     jsPath: 'assets/app/js/**/*.js',
     distPath: 'dist',
-    imagePath: 'assets/images/**/*.+(png|jpg|gif|svg|jpeg)',
+    imagePath: 'assets/app/images/**/*.+(png|jpg|gif|svg|jpeg)',
 }
 
 

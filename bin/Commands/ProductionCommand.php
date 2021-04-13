@@ -16,12 +16,15 @@ class ProductionCommand extends Command {
     }
 
     protected function execute (InputInterface $input, OutputInterface $output): int {
-        if (file_exists('cache/errors.log')) {
-            unlink('cache/errors.log');
-        }
-
         if (file_exists('cache/cache.php')) {
             unlink('cache/cache.php');
+        }
+
+        $path = 'logs/_*.json';
+        foreach (glob($path) as $file) {
+            if (file_exists($file)) {
+                unlink($file);
+            }
         }
 
         $output->writeln('<info>Completed!</info>');

@@ -1,6 +1,8 @@
 <?php
 session_start();
 date_default_timezone_set('Africa/Lagos');
+
+use MultiveLogger\LoggerFactory;
 use DI\ContainerBuilder;
 use Medoo\Medoo;
 use Monolog\Handler\StreamHandler;
@@ -43,10 +45,25 @@ $containerBuilder = new ContainerBuilder();
 $container = $containerBuilder->build();
 $container->set('upload_directory', __DIR__ . '/uploads'. DIRECTORY_SEPARATOR);
 // e.g $path = $this->get('upload_directory');
+
+const LOGGER_SETTINGS = [
+    'name' => 'app',
+    'path' => __DIR__ . DIRECTORY_SEPARATOR. 'logs',
+    'filename' => 'app.log',
+    'level' => Logger::DEBUG,
+    'file_permission' => 0775,
+];
+
+$container->set('MultiveLoggerFactory', function() : LoggerFactory {
+    return new LoggerFactory(LOGGER_SETTINGS);
+});
+// e.g $this->get('MultiveLoggerFactory')->error('Bar', ['hello', __FILE__, __LINE__]);
+
+
 $container->set('logger', function() : Logger {
     $name = $_ENV['PROJECT_NAME'];
     $logger = new Logger($name);
-    $file_handler = new StreamHandler(__DIR__ . '/cache/'. $name .'.log', Logger::WARNING);
+    $file_handler = new StreamHandler(__DIR__ . '/logs/'. $name .'.log', Logger::WARNING);
     $logger->pushHandler($file_handler);
     return $logger;
 });
@@ -84,7 +101,8 @@ $app->add(function (ServerRequestInterface $request, RequestHandlerInterface $ha
 $app->addRoutingMiddleware();
 $app->setBasePath(getBasePath());
 if (in_array($_SERVER['REMOTE_ADDR'], REMOTE_ADDR)) {
-    $app->addErrorMiddleware(true, true, true);
+    $logger = $app->getContainer()->get('MultiveLoggerFactory')->addFileHandler('error.log')->createLogger();
+    $app->addErrorMiddleware(true, true, true, $logger);
     error_reporting(E_ALL); // Error/Exception engine, always use E_ALL
 
     ini_set('ignore_repeated_errors', TRUE); // always use TRUE
