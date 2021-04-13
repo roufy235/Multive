@@ -20,7 +20,7 @@ class ProductionCommand extends Command {
             unlink('cache/cache.php');
         }
 
-        $path = 'logs/_*.json';
+        $path = 'logs/*.log';
         foreach (glob($path) as $file) {
             if (file_exists($file)) {
                 unlink($file);

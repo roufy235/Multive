@@ -1,4 +1,4 @@
-<?php
+<?php /** @noinspection UnknownInspectionInspection */
 
 namespace MultiveLogger;
 
@@ -52,6 +52,7 @@ final class LoggerFactory {
         return $this;
     }
 
+    /** @noinspection PhpUnused */
     public function addConsoleHandler(int $level = null): self {
         $streamHandler = new StreamHandler('php://stdout', $level ?? $this->level);
         $streamHandler->setFormatter(new LineFormatter(null, null, false, true));
