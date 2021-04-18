@@ -1,1 +1,1 @@
-const pageApp={data:function(){return{}},created:function(){axios.get(apiBaseUrl+"/registration").then(({status:e})=>{200===e?console.log("Connected to server!"):console.error("Unable to connect to the server")}).catch(e=>{alert(e)})}};Vue.createApp(pageApp).mount("#indexApp");
+const pageApp={data:function(){return{}},created:function(){axiosInstance.get("/registration").then(({status:e})=>{200===e?console.log("Connected to server!"):console.error("Unable to connect to the server")}).catch(e=>{alert(e)})}};Vue.createApp(pageApp).mount("#indexApp");

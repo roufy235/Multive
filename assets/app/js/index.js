@@ -5,7 +5,8 @@ const pageApp = {
         }
     },
     created() {
-        axios.get(apiBaseUrl + '/registration')
+        // noinspection JSUnresolvedVariable
+        axiosInstance.get('/registration')
             .then(({data, status}) => {
                 if (status === 200) {
                     console.log('Connected to server!')
