@@ -133,8 +133,10 @@ $app->add(function (ServerRequestInterface $request, RequestHandlerInterface $ha
 // end
 
 // route caching
-//$routeCollector = $app->getRouteCollector();
-//$cacheFile = __DIR__ . '/cache/cache.php';
-//$routeCollector->setCacheFile($cacheFile);
+if ($isLiveServer) {
+    $routeCollector = $app->getRouteCollector();
+    $cacheFile = __DIR__ . '/cache/cache.php';
+    $routeCollector->setCacheFile($cacheFile);
+}
 // end
 $app->run();
