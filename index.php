@@ -124,8 +124,7 @@ $app->add(function (ServerRequestInterface $request, RequestHandlerInterface $ha
         return $handler->handle($request);
     } catch (HttpNotFoundException $httpException) {
         $response = (new Response())->withStatus(404);
-        $renderer = new PhpRenderer(__DIR__ . '/views/');
-        return $renderer->render($response, "errorPage.php", [
+        return (new PhpRenderer(__DIR__ . '/views/'))->render($response, "errorPage.php", [
 
         ]);
     }
