@@ -124,8 +124,7 @@ $app->add(function (ServerRequestInterface $request, RequestHandlerInterface $ha
         return $handler->handle($request);
     } catch (HttpNotFoundException $httpException) {
         $response = (new Response())->withStatus(404);
-        $renderer = new PhpRenderer(__DIR__ . '/views/');
-        return $renderer->render($response, "errorPage.php", [
+        return (new PhpRenderer(__DIR__ . '/views/'))->render($response, "errorPage.php", [
 
         ]);
     }
@@ -133,8 +132,10 @@ $app->add(function (ServerRequestInterface $request, RequestHandlerInterface $ha
 // end
 
 // route caching
-//$routeCollector = $app->getRouteCollector();
-//$cacheFile = __DIR__ . '/cache/cache.php';
-//$routeCollector->setCacheFile($cacheFile);
+if ($isLiveServer) {
+    $routeCollector = $app->getRouteCollector();
+    $cacheFile = __DIR__ . '/cache/cache.php';
+    $routeCollector->setCacheFile($cacheFile);
+}
 // end
 $app->run();
