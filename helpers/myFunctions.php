@@ -21,6 +21,7 @@ function getAdminUrlBasePath() : string { // project base path
 }
 
 
+/** @noinspection PhpMultipleClassDeclarationsInspection */
 function returnMyStatus (array $responseArray, ResponseThis $response): ResponseThis {
     try {
         $response->getBody()->write(json_encode($responseArray, JSON_THROW_ON_ERROR));
