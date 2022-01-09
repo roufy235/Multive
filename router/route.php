@@ -12,12 +12,13 @@ return function (App $app) {
 
     $app->get('/', function ($request, $response, $args) {
 
+        new DB();
+
         $newUser = new UserModel();
         $newUser->setName(234);
         //$this->get('LoggerNewAccount')->registerUser($newUser);
 
-        $renderer = new PhpRenderer(__DIR__ . '/../views/');
-        return $renderer->render($response, "index.php", [
+        return (new PhpRenderer(__DIR__ . '/../views/'))->render($response, "index.php", [
 
         ]);
     });
@@ -30,15 +31,13 @@ return function (App $app) {
         print_r($selectAll);
         die();
 
-        $renderer = new PhpRenderer(__DIR__ . '/../views/');
-        return $renderer->render($response, "index.php", [
+        return (new PhpRenderer(__DIR__ . '/../views/'))->render($response, "index.php", [
 
         ]);
     });
 
     $app->get('/testVueThree', function ($request, $response, $args) {
-        $renderer = new PhpRenderer(__DIR__ . '/../views/');
-        return $renderer->render($response, "vueThreeTest.php", [
+        return (new PhpRenderer(__DIR__ . '/../views/'))->render($response, "vueThreeTest.php", [
 
         ]);
     });

@@ -58,7 +58,7 @@
     "post-root-package-install": [
       "php -r \"file_exists('.env') || copy('.env.example', '.env');\""
     ],
-    "start": "php -S localhost:3000 index.php"
+    "start": "php -S localhost:8080"
   },
   "require-dev": {
     "roave/security-advisories": "dev-master",

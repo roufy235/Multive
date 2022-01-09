@@ -16,11 +16,12 @@ use Psr\Http\Message\ResponseInterface as ResponseThis;
 use Slim\Routing\RouteContext;
 require __DIR__ . '/vendor/autoload.php';
 
-const REMOTE_ADDR = ['192.168.43.8', 'localhost', '127.0.0.1', '192.168.43.237'];
+const REMOTE_ADDR = ['192.168.43.8', 'localhost', '127.0.0.1', '192.168.43.237', '::1'];
 $isLiveServer = false;
 if (!in_array($_SERVER['REMOTE_ADDR'], REMOTE_ADDR)) {
     $dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
     $isLiveServer = true;
+    //die($_SERVER['REMOTE_ADDR']);
 } else {
     $dotenv = Dotenv\Dotenv::createImmutable(__DIR__, '.env.example');
 }
@@ -74,7 +75,6 @@ $container->set('databaseConnection', function() : array {
         'password' => $_ENV['PASSWORD']
     ];
 });
-
 AppFactory::setContainer($container);
 
 // Create App
@@ -99,11 +99,8 @@ if (in_array($_SERVER['REMOTE_ADDR'], REMOTE_ADDR)) {
     $MultiveErrorLoggerFactory = $app->getContainer()->get('MultiveErrorLoggerFactory')->addFileHandler('error.log')->createLogger();
     $app->addErrorMiddleware(true, true, true, $MultiveErrorLoggerFactory);
     error_reporting(E_ALL); // Error/Exception engine, always use E_ALL
-
     ini_set('ignore_repeated_errors', TRUE); // always use TRUE
-
     ini_set('display_errors', FALSE); // Error/Exception display, use FALSE only in production environment or real server. Use TRUE in development environment
-
     ini_set('log_errors', TRUE); // Error/Exception file logging engine.
     ini_set('error_log',  __DIR__ . '/cache/errors.log'); // Logging file path
 }
@@ -116,15 +113,14 @@ $routes($app);
 $routesApi = require __DIR__ . '/server/api.php';
 $routesApi($app);
 
-
-
 // HttpNotFound Middleware
 $app->add(function (ServerRequestInterface $request, RequestHandlerInterface $handler) {
     try {
         return $handler->handle($request);
     } catch (HttpNotFoundException $httpException) {
         $response = (new Response())->withStatus(404);
-        return (new PhpRenderer(__DIR__ . '/views/'))->render($response, "errorPage.php", [
+        return (new PhpRenderer(__DIR__ . '/views/'))
+            ->render($response, "errorPage.php", [
 
         ]);
     }
@@ -134,7 +130,7 @@ $app->add(function (ServerRequestInterface $request, RequestHandlerInterface $ha
 // route caching
 if ($isLiveServer) {
     $routeCollector = $app->getRouteCollector();
-    $cacheFile = __DIR__ . '/cache/cache.php';
+    $cacheFile = __DIR__ . '/cache/route_cache.php';
     $routeCollector->setCacheFile($cacheFile);
 }
 // end

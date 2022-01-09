@@ -38,8 +38,7 @@ class DB {
     }
 
     protected function multiveEmailValidator($email): bool {
-        $validator = new EmailValidator();
-        return $validator->isValid($email, new RFCValidation());
+        return (new EmailValidator())->isValid($email, new RFCValidation());
     }
 
     /** @noinspection DuplicatedCode */
