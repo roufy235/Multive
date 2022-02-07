@@ -1,8 +1,6 @@
 const pageApp = {
     data() {
-        return {
-
-        }
+        return {}
     },
     created() {
         // noinspection JSUnresolvedVariable
@@ -18,5 +16,5 @@ const pageApp = {
                 alert(error)
             });
     }
-}
+};
 Vue.createApp(pageApp).mount('#indexApp');
