@@ -95,7 +95,7 @@ $app->add(function (ServerRequestInterface $request, RequestHandlerInterface $ha
 });
 $app->addRoutingMiddleware();
 $app->setBasePath(getBasePath());
-if (in_array($_SERVER['REMOTE_ADDR'], REMOTE_ADDR)) {
+if (!$isLiveServer) {
     $MultiveErrorLoggerFactory = $app->getContainer()->get('MultiveErrorLoggerFactory')->addFileHandler('error.log')->createLogger();
     $app->addErrorMiddleware(true, true, true, $MultiveErrorLoggerFactory);
     error_reporting(E_ALL); // Error/Exception engine, always use E_ALL
