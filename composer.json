@@ -24,6 +24,7 @@
   ],
   "minimum-stability": "stable",
   "require": {
+    "php": "^8.0",
     "slim/slim": "4.*",
     "slim/psr7": "^1.2",
     "slim/php-view": "^3.0",
