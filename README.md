@@ -15,7 +15,7 @@
 - [Composer](https://getcomposer.org/).
 - [NodeJs](https://nodejs.org/).
 - [GulpJs](https://gulpjs.com/).
-- PHP 7.3+.
+- PHP 8.1.2+.
 - MySQL/MariaDB.
 
 ## Quickstart guide
