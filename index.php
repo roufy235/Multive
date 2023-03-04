@@ -6,6 +6,8 @@ use MultiveLogger\LoggerFactory;
 use DI\ContainerBuilder;
 use Monolog\Logger;
 use MultiveLogger\LoggerNewAccount;
+use Psr\Container\ContainerExceptionInterface;
+use Psr\Container\NotFoundExceptionInterface;
 use Psr\Http\Message\ServerRequestInterface;
 use Psr\Http\Server\RequestHandlerInterface;
 use Slim\Exception\HttpNotFoundException;
@@ -45,6 +47,33 @@ $containerBuilder = new ContainerBuilder();
 $container = $containerBuilder->build();
 $container->set('upload_directory', __DIR__ . '/uploads'. DIRECTORY_SEPARATOR);
 // e.g $path = $this->get('upload_directory');
+
+$dbSettings = [
+    // Slim Settings
+    'determineRouteBeforeAppMiddleware' => false,
+    'displayErrorDetails' => true,
+    'db' => [
+        'driver' => 'mysql',
+        'host' => 'localhost',
+        'database' => $_ENV['DB_NAME'],
+        'username' => $_ENV['USER'],
+        'password' => $_ENV['PASSWORD'],
+        'charset'   => 'utf8',
+        'collation' => 'utf8_unicode_ci',
+        'prefix'    => '',
+    ]
+];
+
+$container->set('dbSettings', $dbSettings);
+try {
+    $dbSettings = $container->get('dbSettings')['db'];
+    $capsule = new Illuminate\Database\Capsule\Manager;
+    $capsule->addConnection($dbSettings);
+    $capsule->bootEloquent();
+    $capsule->setAsGlobal();
+} catch (NotFoundExceptionInterface|ContainerExceptionInterface $e) {
+    echo 'error';
+}
 
 const LOGGER_SETTINGS = [
     'name' => 'app',

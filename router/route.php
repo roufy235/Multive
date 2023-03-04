@@ -4,6 +4,7 @@
 declare(strict_types=1);
 
 use MultiveLogger\models\UserModel;
+use MultiveModels\User;
 use ReallySimpleJWT\Token;
 use Slim\App;
 use Slim\Views\PhpRenderer;
@@ -17,6 +18,9 @@ return function (App $app) {
         $newUser = new UserModel();
         $newUser->setName(234);
         //$this->get('LoggerNewAccount')->registerUser($newUser);
+
+        //echo  \MultiveModels\User::all()->toJson();
+        $users = User::where('user_id', '>', 0)->get();
 
         return (new PhpRenderer(__DIR__ . '/../views/'))->render($response, "index.php", [
 
