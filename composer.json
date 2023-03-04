@@ -24,7 +24,7 @@
   ],
   "minimum-stability": "stable",
   "require": {
-    "php": "^8.0",
+    "php": "^8.2",
     "slim/slim": "4.*",
     "slim/psr7": "^1.2",
     "slim/php-view": "^3.0",
@@ -40,7 +40,8 @@
     "catfan/medoo": "^1.7",
     "ext-readline": "*",
     "symfony/console": "^5.2",
-    "symfony/polyfill-uuid": "^1.22"
+    "symfony/polyfill-uuid": "^1.22",
+    "illuminate/database": "^10.2"
   },
   "autoload": {
     "classmap": ["controllers/", "tests/", "bin/Commands"],
@@ -52,7 +53,8 @@
     ],
     "psr-4": {
       "MultiveCLI\\": "bin/Commands",
-      "MultiveLogger\\": "controllers/factory"
+      "MultiveLogger\\": "controllers/factory",
+      "MultiveModels\\": "models/"
     }
   },
   "scripts": {
