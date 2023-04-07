@@ -55,15 +55,4 @@ return function (App $app) {
         return returnMyStatus($verify->response, $newResponse);
     };
 
-    $app->get($apiBase.'/registration', function (Request $request, Response $response) {
-        $hello = new REGISTRATION();
-        $responseArray = $hello->helloWorld();
-        return returnMyStatus($responseArray, $response);
-    });
-
-    $app->get($apiBase.'/hello', function (Request $request, Response $response) {
-        $array = array();
-        $array['status'] = true;
-        return returnMyStatus($array, $response);
-    });
 };

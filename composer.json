@@ -37,24 +37,26 @@
     "rbdwllr/reallysimplejwt": "^3.1",
     "monolog/monolog": "^2.2",
     "slim/csrf": "^1.2",
-    "catfan/medoo": "^1.7",
     "ext-readline": "*",
     "symfony/console": "^5.2",
     "symfony/polyfill-uuid": "^1.22",
-    "illuminate/database": "^10.2"
+    "illuminate/database": "^10.2",
+    "php-di/slim-bridge": "^3.3",
+    "illuminate/support": "^10.6"
   },
   "autoload": {
     "classmap": ["controllers/", "tests/", "bin/Commands"],
     "files": [
       "./helpers/TokenGenerator.php",
+      "./app/helpers.php",
       "./controllers/SQL.php",
       "./helpers/myFunctions.php",
       "./helpers/session.php"
     ],
     "psr-4": {
+      "App\\" :  "app",
       "MultiveCLI\\": "bin/Commands",
-      "MultiveLogger\\": "controllers/factory",
-      "MultiveModels\\": "models/"
+      "MultiveLogger\\": "controllers/factory"
     }
   },
   "scripts": {
